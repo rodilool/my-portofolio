@@ -1,38 +1,361 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: var(--color-font);
+    font-family: var(--main-font);
+}
+html{
+    overflow-x: none;
+}
+a{
+    text-decoration: none;
+}
+:root {
+    --color-primary-0: #000000;
+    --color-action-0: #00ffff;
+    --color-third-0: #004242;
+    --color-secondary-0: #FFFFFF;
+    --color-font: #FFFFFF;
+    --color-font-dark: #070707;
+    --main-font: 'Rubik', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* App */
+    .main-section {
+        background-color: var(--color-primary-0);
+
+        background:  url("./pictures/asd-modified.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+        box-shadow: inset 0px 100px 250px  10000px rgba(0, 0, 0, 0.92);        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: ease-in 500ms;
+    }
+    .main-section.is_inverted{
+        background-color: var(--color-primary-0);
+
+        background:  url("./pictures/asd-dark.png"), linear-gradient(0deg, rgba(61, 61, 61, 0.9), rgba(255, 255, 255, 0.9));
+        box-shadow: inset 0px 100px 250px  1000px rgba(214, 214, 214, 0.88);        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: ease-in 500ms;
+    }
+    .main-about{
+        background-image: linear-gradient(rgb(3, 3, 3), rgb(5, 5, 5), rgb(10, 10, 10), rgb(15, 15, 15));
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+
+/* /App */
+
+
+/* NavBar */
+header{
+    padding: 2rem 0rem;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.end-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    padding: 0 2rem;
+}
+header .logo{
+    font-size: 2rem;
+    font-family: 'Inspiration', cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: var(--color-font);
+    padding: 0 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact-button{
+    position: relative;
+    width: 156px;
+    height: 48px;
+    border-radius: 100vw;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.103);
+    font-size: 1.35rem;
+    margin: -8px 2rem 0 2rem;
+    color: var(--color-font);
+    border: var(--color-action-0)  3px solid;
+    box-shadow: 0px 0px 8px var(--color-action-0);
+    transition: ease-in 500ms;
+}
+.contact-button.is_inverted{
+    color: var(--color-font-dark);
+    border: var(--color-third-0) 3px solid;
+    box-shadow: 0px 0px 8px var(--color-third-0);
+    background-color: rgba(245, 245, 245, 0.151);
+}
+       /* Styling the menu button */
+       
+    .menu-btn {
+        position: relative;
+        display: b;
+        z-index: 99999;
+        /* right: 35px;
+        top: 40px; */
+        cursor: pointer;
+        transition: all 0.5s ease-out;
+    }   /* Styling the hamburger lines */
+    .menu-btn .btn-line {
+        width: 35px;
+        height: 4px;
+        margin: 0 0 7.67px 0;
+        background: var(--color-secondary-0);
+        transition: all 0.5s ease-out;
+    }
+    .menu-btn .btn-line.is_inverted{
+        background: var(--color-primary-0);
+    }
+
+    /* Adding transform to the X */
+    /* .menu-btn.close {
+        transform: rotate(180deg);
+    } */
+
+    /* Styling the three lines to make it an X */
+    /* .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    } */
+
+    /* Styling the position of the menu icon */
+    /* .menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        opacity: 0.9;
+        visibility: hidden;
+    }
+
+    .menu.show {
+        visibility: visible;
+    } */
+
+    /* Adding a transition delay
+      to the 4 items in the
+      navigation menu */
+    /* .nav-item:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-item:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-item:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .nav-item:nth-child(4) {
+        transition-delay: 0.4s;
+    } */
+/* NavBar */
+
+
+
+/* Home */
+.main-section{
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content h1{
+    font-size: 48px;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content h1 .iam {
+    font-size: 36px;
+}
+.content h1 .world{
+    font-size: 64px;
+    color: var(--color-action-0);
+}
+.content h1 .exclamation{
+    font-size: 64px;
+}
+.content h1 .name {
+    font-size: 48px;
+    color: var(--color-action-0);
+}    
+.content h1.is_inverted, .iam.is_inverted, .exclamation.is_inverted{
+    color: rgb(8, 8, 8);
+}
+
+.content h1 .name.is_inverted, .content h1 .world.is_inverted{
+    color: var(--color-third-0);
+}
+
+.button-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+.button{
+    border-radius: 20px;
+    padding: 15px;
+    width: 35%;
+    border: 1px solid black;
+    text-shadow: 1px 4px 3px rgba(0, 0, 0, 0.356);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.projects{
+    background-color: var(--color-action-0);
+}
+.about-me{
+    background-color: var(--color-secondary-0);
+}
+.button p{
+    color: rgb(7, 7, 7);
+    font-size: 32px;
+    font-weight: bold;
+}
+.line{
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 0;
+}
+.button .arrow{
+        width:20px;
+        height: 25px;
+        display: flex;
+        margin-left: 0;
+        
+}      
+.arrow:before {
+        content: "";
+        background: black;
+        width:15px;
+        clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+      }
+/* /Home */
+
+
+/* .about-me */
+.main-about{
+    overflow: hidden;
+}
+.title{
+    transform: rotate(-90deg);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 43%;
+    left: -250px;
+    border-bottom: 1px solid rgba(255, 254, 254, 0.17);
+}
+.title h1{
+    font-size: 126px;
+    color:rgba(255, 254, 254, 0.17);
+}
+
+.circle{
+    position: absolute;
+    border-radius: 100000000px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid wheat;
+}
+.circle.last{    
+    bottom: 10%;
+    right: 20%;
+    width: 820px;
+    height: 820px;
+    animation: spin 50s linear infinite;
+}
+.circle.mid{
+    bottom: 18%;
+    right: 25%;
+    width: 545px;
+    height: 545px;
+    animation: spin 50s linear infinite;
+}
+.ball{
+    width: 90px;
+    height: 90px;
+    background-color: #00ffff;
+    position: absolute;
+    border-radius: 50%;
+}
+.ball.a{
+    transform: translate(410px);
+
+}
+.ball.b{
+    transform: translate(-150px, 200px);
+}
+.ball.c{
+    transform: translate(-90px, 80px);
+}
+.ball.d{
+    transform: translate(272.5px);
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+/* /.about-me */
+
+
+
+/* Animations */
+.glow-effect{
+        text-shadow: 10px 10px 20px #ffffff;
+        -webkit-animation: text-shadow-drop-center 2s ease-out infinite alternate both;
+                animation: text-shadow-drop-center 2s ease-out infinite alternate both;
+}
+
+/* Keyframes */
+@-webkit-keyframes text-shadow-drop-center {
+    0% {
+      text-shadow: 1px 1px 12px #00e8e825 ;
+    }
+    100% {
+      text-shadow: 1px 1px 12px var(--color-action-0);
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @keyframes text-shadow-drop-center {
+    0% {
+      text-shadow: 1px 1px 12px #00c9c91e;
+    }
+    100% {
+      text-shadow: 1px 1px 12px var(--color-action-0);
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
