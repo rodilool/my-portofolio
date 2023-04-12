@@ -30,20 +30,23 @@ class Home extends React.Component<Props, State> {
             </span>
           </h1>
           <div className="button-section">
-            <div className="button projects">
-              <div className="line"></div>
-              <div className="arrow"></div>
-              <a>
+            <a>
+              <div className="button projects">
+                <div className="line"></div>
+                <div className="arrow"></div>
                 <p>PROJECTS</p>
-              </a>
-            </div>
-            <div className="button about-me">
-              <div className="line"></div>
-              <div className="arrow"></div>
-              <a href="/about-me">
+              </div>
+            </a>
+
+            <a href="/about-me">
+              {" "}
+              <div className="button about-me">
+                <div className="line"></div>
+                <div className="arrow"></div>
+
                 <p>ABOUT ME</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
       </main>

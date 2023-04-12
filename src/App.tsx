@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./Components/navBar/navBar";
 import Home from "./Components/Home/home";
 import AboutMe from "./Components/aboutMe/aboutMe";
+import Contacts from "./Components/contacts/contacts";
 
 interface Props {}
 
@@ -47,6 +48,9 @@ const App: React.FC<Props> = (props: Props) => {
         </Route>
         <Route>
           <Route path="/about-me" element={<AboutMe />} />
+        </Route>
+        <Route>
+          <Route path="/contacts" element={<Contacts />} />
         </Route>
       </Routes>
     </BrowserRouter>

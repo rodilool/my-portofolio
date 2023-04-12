@@ -1,4 +1,6 @@
 import { Component } from "react";
+import Blob from "../../pictures/blobanimation.svg";
+
 interface FuncProps {
   toggleTheme: any;
 }
@@ -46,13 +48,20 @@ export default class NavBar extends Component<FuncProps, State> {
   render() {
     return (
       <header>
-        <h1 className="logo" onClick={this.props.toggleTheme}>
-          RS
-        </h1>
+        <a href="/">
+          {" "}
+          <h1 className="logo" /*onClick={this.props.toggleTheme}*/>RS</h1>
+        </a>
+
         <div className="end-section">
-          <button className="contact-button" id="swithTheme">
-            CONTACTS
-          </button>
+          <a className="contact-button" href="/contacts">
+            <div className="contact" id="swithTheme">
+              CONTACTS
+            </div>
+            <div className="contact hover" id="swithTheme">
+              CONTACTS
+            </div>
+          </a>
           <div>
             <div className="menu-btn">
               <div className="btn-line" id="swithTheme"></div>
