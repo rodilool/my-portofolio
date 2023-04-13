@@ -5,6 +5,7 @@ import NavBar from "./Components/navBar/navBar";
 import Home from "./Components/Home/home";
 import AboutMe from "./Components/aboutMe/aboutMe";
 import Contacts from "./Components/contacts/contacts";
+import Projects from "./Components/projects/projects";
 
 interface Props {}
 
@@ -51,6 +52,9 @@ const App: React.FC<Props> = (props: Props) => {
         </Route>
         <Route>
           <Route path="/contacts" element={<Contacts />} />
+        </Route>
+        <Route>
+          <Route path="/projects" element={<Projects />} />
         </Route>
       </Routes>
     </BrowserRouter>

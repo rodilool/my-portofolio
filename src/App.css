@@ -30,7 +30,6 @@ a{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        transition: ease-in 500ms;
     }
     .main-section.is_inverted{
         background-color: var(--color-primary-0);
@@ -40,7 +39,6 @@ a{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        transition: ease-in 500ms;
     }
     .main{
         background-image: linear-gradient(rgb(3, 3, 3), rgb(5, 5, 5), rgb(10, 10, 10), rgb(15, 15, 15));
@@ -179,13 +177,29 @@ header .logo{
         filter: drop-shadow(1px 2px 8px var(--color-third-0));
     } */
     /* Adding transform to the X */
-    /* .menu-btn.close {
+    .closingcircle{
+        background-color: var(--color-primary-0);
+        position: absolute;
+        border-radius: 100vw;
+        width: 250px;
+        height: 220px;
+        right: -200px;
+        top: -220px;
+        transition: 350ms ease-out;
+        z-index: 9999;
+    }
+    .closingcircle.open{
+        filter: drop-shadow(1px 1px 4px var(--color-primary-0));
+        right: -100px;
+        top: -120px;
+    }
+    .menu-btn.close {
         transform: rotate(180deg);
-    } */
+    }
 
     /* Styling the three lines to make it an X */
-    /* .menu-btn.close .btn-line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+    .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 10px);
     }
 
     .menu-btn.close .btn-line:nth-child(2) {
@@ -193,9 +207,58 @@ header .logo{
     }
 
     .menu-btn.close .btn-line:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    } */
+        transform: rotate(-45deg) translate(10px, -9px);
+    } 
+    .menublob{
+        position: absolute;
+        top: -500px;
+        right: -1000px;
+        width: 1000px;
+        height: 1000px;
+        z-index: 9997;
+        /* display: none; does give more performance*/
+        transition: 650ms ease-out;
+    }
+    .menublob.open{
+        /* display: block; does give more performance*/
+        top: -200px;
+        right: -500px;
+        
+    }
+    .menu{
+        position: absolute;
+        width: 300px;
+        height: 600px;
+        z-index: 9998;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: -600px;
+        right: -300px;
+        transition: 500ms ease-out;
+        opacity: 0;
+        /* display: none; does give more performance*/
+    }
+    .menu.open{
+        top: 0;
+        right: 0;
+        /* display: block; does give more performance*/
+        opacity: 1;
+    }
+    .menu #links{
+        font-size: 2.25rem;
+        font-weight: bold;
+        margin: 1rem;
+    }
 
+    .menu #links.active{
+        color: rgba(255, 255, 255, 0);
+        color: var(--color-third-0);
+        text-shadow: -1.5px 1.5px 0 #ffffff,
+                      1px 1.5px 0 #ffffff,
+                     1px -1px 0 #ffffff;
+    }
     /* Styling the position of the menu icon */
     /* .menu {
         position: fixed;
@@ -452,11 +515,7 @@ header .logo{
     z-index: 0;
 
 }
-.ball.b{
-    transform: translate(-350px, 230px);
-    background-image: url('./pictures/GitHub.png');
-    z-index: 0;
-}
+
 .ball.c{
     transform: translate(-100px, 218px);
     background-image: url('./pictures/Typescript_logo_2020\ 1.png');
@@ -471,7 +530,7 @@ header .logo{
 }
 .ball.h{
     transform: translate(90px, -270px);
-    background-image: url('./pictures/Node.js.png');
+    background-image: url('./pictures/GitHub.png');
 }
 .ball.i{
     transform: translate(-250px, -220px);
@@ -584,6 +643,8 @@ header .logo{
 
 .icon.git{
     background-image: url('./pictures/GitHubContacts.png');
+    width: 74px;
+    height: 74px;
 }
 .icon.email{
     background-image: url('./pictures/EmailContacts.png');
@@ -592,29 +653,45 @@ header .logo{
     background-image: url('./pictures/inContacts.png');
 }
 
-.git-area{
+.git-area, .email-area{
+    position: relative;
     width: 74px;
     height: 74px;
     display: flex;
     align-items: center;
-    transition: ease 500ms;
-
+    transition: ease 500ms ;
+    overflow-x: hidden;
 }
+
 .user-git{
     position: absolute;
-    opacity: 0;
     margin-left: 2rem;
     font-size: 1rem;
-    transition: ease-in 250ms 750ms;
-    background-color: transparent;
+    left: 70px;
+    opacity: 0;
+    transition: ease 500ms 150ms;
+}
+.invisible{
+    opacity: 0;
+}
+.user-email{
+    position: absolute;
+    margin-left: 2rem;
+    font-size: 1rem;
+    left: 60px;
+    opacity: 0;
+    transition: ease 500ms 150ms;
 }
 .git-area:hover{
-    width: 230px;
-    
+    width: 225px;
+}
+.email-area:hover{
+    width: 250px;
 }
 .git-area:hover > .user-git{
-    left: 10px;
-    position: relative;
+    opacity: 1;
+}
+.email-area:hover > .user-email{
     opacity: 1;
 }
 
