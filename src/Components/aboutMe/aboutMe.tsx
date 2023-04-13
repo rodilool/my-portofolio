@@ -11,7 +11,7 @@ class AboutMe extends React.Component<Props, State> {
   }
   render() {
     return (
-      <main className="main-about" id="swithTheme">
+      <main className="main about" id="swithTheme">
         <div className="circles">
           <div className="circle last">
             <div className="spin last">

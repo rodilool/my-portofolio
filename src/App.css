@@ -42,7 +42,7 @@ a{
         background-size: cover;
         transition: ease-in 500ms;
     }
-    .main-about{
+    .main{
         background-image: linear-gradient(rgb(3, 3, 3), rgb(5, 5, 5), rgb(10, 10, 10), rgb(15, 15, 15));
         background-position: center;
         background-repeat: no-repeat;
@@ -322,7 +322,7 @@ header .logo{
 
 
 /* .about-me */
-.main-about{
+.main.about{
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -519,8 +519,11 @@ header .logo{
     font-style: italic;
     text-decoration: underline;
     filter: brightness(50%);
-    transition: ease 250ms;
+    transition: ease 250ms 100ms;
     width: 100px;
+}
+.information a:hover{
+    filter: brightness(20%);
 }
 .information .row img{
     margin: 2rem 0 1rem;
@@ -545,6 +548,77 @@ header .logo{
 }
 /* /.about-me */
 
+
+
+/* contacts */
+
+.main.contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-area h2{
+    font-size: 64px;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+.contact-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -6rem;
+}
+.icons{
+    width: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon{
+    width: 74px;
+    height: 74px;
+}
+
+.icon.git{
+    background-image: url('./pictures/GitHubContacts.png');
+}
+.icon.email{
+    background-image: url('./pictures/EmailContacts.png');
+}
+.icon.in{
+    background-image: url('./pictures/inContacts.png');
+}
+
+.git-area{
+    width: 74px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    transition: ease 500ms;
+
+}
+.user-git{
+    position: absolute;
+    opacity: 0;
+    margin-left: 2rem;
+    font-size: 1rem;
+    transition: ease-in 250ms 750ms;
+    background-color: transparent;
+}
+.git-area:hover{
+    width: 230px;
+    
+}
+.git-area:hover > .user-git{
+    left: 10px;
+    position: relative;
+    opacity: 1;
+}
+
+/* /contacts */
 
 
 /* Animations */
