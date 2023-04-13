@@ -251,6 +251,9 @@ header .logo{
         font-weight: bold;
         margin: 1rem;
     }
+    .menu #links:hover{
+        color: rgba(255, 255, 255, 0.466);
+    }
 
     .menu #links.active{
         color: rgba(255, 255, 255, 0);
@@ -705,27 +708,86 @@ header .logo{
 }
 
 .cardHolder{
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     height: 560px;
 }
+.cardHolder > .card:not(:first-child) {
+    margin-left: -420px;
+}
+
+.card:nth-child(1) {
+    z-index: 1;    
+    -webkit-animation: slide-in-left 750ms 250ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 750ms 250ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.card:nth-child(2) {
+    z-index: 2;
+    -webkit-animation: slide-in-left 750ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 750ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+.card:nth-child(2):hover{
+    margin: 0 100px 100px -300px;
+    z-index: 15;
+}
+.card:nth-child(1):hover{
+    margin: 0 100px 100px 100px;
+    z-index: 15;
+}
+
 .card{
     width: 500px;
-    background-color: rgb(194, 194, 194);
+    
     border: 2px solid white;
     height: 100%;
     border-radius: 30px;
     position: relative;
     overflow: hidden;
+    transition: 350ms ease-in 250ms;
 }
+.card.light{
+    background-color: rgb(194, 194, 194);
+    color: var(--color-font-dark);
+}
+.card.dark{
+    background-color: var(--color-third-0);
+    color: var(--color-font);
+}
+
+.card.dark .title,
+.card.dark .card-information,
+.card.dark .card-information .languageList p,
+.card.dark .card-information .languageList h3,
+.card.dark .card-information .description{
+    color: var(--color-font);
+}
+.card.light .title,
+.card.light .card-information,
+.card.light .card-information .languageList p,
+.card.light .card-information .languageList h3,
+.card.light .card-information .description{
+    color: var(--color-font-dark)
+}
+
+.card.light .title{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.493);
+    text-shadow: 0px 0px 3px #000000;
+}
+.card.dark .title{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.493);
+    text-shadow: 0px 0px 3px #ffffff;
+}
+
 .card .title{
     left: -220px;
     font-size: 2.25rem;
     font-weight: bold;
-    color: var(--color-font-dark);
-    text-shadow: 0px 0px 3px #000000;
     top: 46.5%;
     margin: 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.493);
     width: 100%;
 }
 .card-information{
@@ -749,14 +811,22 @@ header .logo{
     font-size: 1rem;
     width: 80%;
     text-align: justify;
-    color: var(--color-font-dark);
     margin-top: 1rem;
 }
 .card-information .languageList p{
-    border: 1px solid red;
-    justify-self: flex-end;
-    color: var(--color-font-dark);
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    font-size: 1rem;
 }
+
+.card-information .languageList{
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 /* /projects */
 
 /* Animations */
@@ -767,6 +837,36 @@ header .logo{
 }
 
 /* Keyframes */
+@-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
 @-webkit-keyframes text-shadow-drop-center {
     0% {
       text-shadow: 1px 1px 12px #00e8e825 ;

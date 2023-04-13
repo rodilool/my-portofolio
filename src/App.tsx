@@ -40,6 +40,23 @@ const App: React.FC<Props> = (props: Props) => {
     }
   }, [lightMode]);
 
+  function getRandomColor() {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  function setRandomColor(obj: any) {
+    obj.style.textShadow = `1px 1px 4px ${getRandomColor()}`;
+  }
+
+  function setColorToDefault(obj: any) {
+    obj.style.textShadow = ``;
+  }
+
   return (
     <BrowserRouter>
       <NavBar toggleTheme={toggleTheme} />
@@ -48,13 +65,29 @@ const App: React.FC<Props> = (props: Props) => {
           <Route path="/" element={<Home />} />
         </Route>
         <Route>
-          <Route path="/about-me" element={<AboutMe />} />
+          <Route
+            path="/about-me"
+            element={
+              <AboutMe
+                setRandomColor={setRandomColor}
+                setColorToDefault={setColorToDefault}
+              />
+            }
+          />
         </Route>
         <Route>
           <Route path="/contacts" element={<Contacts />} />
         </Route>
         <Route>
-          <Route path="/projects" element={<Projects />} />
+          <Route
+            path="/projects"
+            element={
+              <Projects
+                setRandomColor={setRandomColor}
+                setColorToDefault={setColorToDefault}
+              />
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>

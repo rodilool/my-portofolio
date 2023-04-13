@@ -1,12 +1,15 @@
 import React from "react";
 import PP from "../../pictures/pp.jpg";
 
-interface Props {}
+interface FuncProps {
+  setRandomColor: any;
+  setColorToDefault: any;
+}
 
 interface State {}
 
-class AboutMe extends React.Component<Props, State> {
-  constructor(props: Props) {
+class AboutMe extends React.Component<FuncProps, State> {
+  constructor(props: FuncProps) {
     super(props);
   }
   render() {
@@ -38,14 +41,70 @@ class AboutMe extends React.Component<Props, State> {
         <div>
           <div className="title">
             <h1>
-              <span className="letter">A</span>
-              <span className="letter">B</span>
-              <span className="letter">O</span>
-              <span className="letter">U</span>
-              <span className="letter">T</span>
+              <span
+                className="letter"
+                onMouseOver={(event) => this.props.setRandomColor(event.target)}
+                onMouseOut={(event) =>
+                  this.props.setColorToDefault(event.target)
+                }
+              >
+                A
+              </span>
+              <span
+                className="letter"
+                onMouseOver={(event) => this.props.setRandomColor(event.target)}
+                onMouseOut={(event) =>
+                  this.props.setColorToDefault(event.target)
+                }
+              >
+                B
+              </span>
+              <span
+                className="letter"
+                onMouseOver={(event) => this.props.setRandomColor(event.target)}
+                onMouseOut={(event) =>
+                  this.props.setColorToDefault(event.target)
+                }
+              >
+                O
+              </span>
+              <span
+                className="letter"
+                onMouseOver={(event) => this.props.setRandomColor(event.target)}
+                onMouseOut={(event) =>
+                  this.props.setColorToDefault(event.target)
+                }
+              >
+                U
+              </span>
+              <span
+                className="letter"
+                onMouseOver={(event) => this.props.setRandomColor(event.target)}
+                onMouseOut={(event) =>
+                  this.props.setColorToDefault(event.target)
+                }
+              >
+                T
+              </span>
               <span> </span>
-              <span className="letter">M</span>
-              <span className="letter">E</span>
+              <span
+                className="letter"
+                onMouseOver={(event) => this.props.setRandomColor(event.target)}
+                onMouseOut={(event) =>
+                  this.props.setColorToDefault(event.target)
+                }
+              >
+                M
+              </span>
+              <span
+                className="letter"
+                onMouseOver={(event) => this.props.setRandomColor(event.target)}
+                onMouseOut={(event) =>
+                  this.props.setColorToDefault(event.target)
+                }
+              >
+                E
+              </span>
             </h1>
           </div>
         </div>
