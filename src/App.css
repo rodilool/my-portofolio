@@ -396,7 +396,7 @@ header .logo{
     display: flex;
     justify-content: center;
     top: 43%;
-    left: -210px;
+    left: -230px;
     border-bottom: 1px solid rgba(255, 254, 254, 0.17);
 }
 .title h1 span{
@@ -697,6 +697,67 @@ header .logo{
 
 /* /contacts */
 
+/* .projects */
+.main.projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardHolder{
+
+    height: 560px;
+}
+.card{
+    width: 500px;
+    background-color: rgb(194, 194, 194);
+    border: 2px solid white;
+    height: 100%;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.card .title{
+    left: -220px;
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: var(--color-font-dark);
+    text-shadow: 0px 0px 3px #000000;
+    top: 46.5%;
+    margin: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.493);
+    width: 100%;
+}
+.card-information{
+    height: 100%;
+    width: 89%;
+    margin-left: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.card-information .websiteDisplay{
+    width: 400px;
+    height: auto;
+    border-radius: 25px;
+    margin-top: 1.5rem;
+    box-shadow: 1px 1px 4px var(--color-primary-0);
+    border: 1px solid var(--color-primary-0);
+}
+.card-information .description{
+    font-size: 1rem;
+    width: 80%;
+    text-align: justify;
+    color: var(--color-font-dark);
+    margin-top: 1rem;
+}
+.card-information .languageList p{
+    border: 1px solid red;
+    justify-self: flex-end;
+    color: var(--color-font-dark);
+}
+/* /projects */
 
 /* Animations */
 .glow-effect{

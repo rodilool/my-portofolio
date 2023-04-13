@@ -30,7 +30,8 @@ class Home extends React.Component<Props, State> {
             </span>
           </h1>
           <div className="button-section">
-            <a>
+            {/* might import nav link for this */}
+            <a href="/projects">
               <div className="button projects">
                 <div className="line"></div>
                 <div className="arrow"></div>
