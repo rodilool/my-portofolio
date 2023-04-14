@@ -25,6 +25,7 @@ export default class NavBar extends Component<FuncProps, State> {
       document.querySelector(".closingcircle")!.classList.add("open");
       document.querySelector(".menublob")!.classList.add("open");
       document.querySelector(".menu")!.classList.add("open");
+      document.querySelector(".blob")!.classList.add("open");
       // document.querySelector(".menu")!.classList.add("show");
       // document.querySelector(".menu-nav")!.classList.add("show");
       // document.querySelector(".menu-branding")!.classList.add("show");
@@ -39,6 +40,7 @@ export default class NavBar extends Component<FuncProps, State> {
       document.querySelector(".closingcircle")!.classList.remove("open");
       document.querySelector(".menublob")!.classList.remove("open");
       document.querySelector(".menu")!.classList.remove("open");
+      document.querySelector(".blob")!.classList.remove("open");
       //   document.querySelector(".menu")!.classList.remove("show");
       //   document.querySelector(".menu-nav")!.classList.remove("show");
       //   document.querySelector(".menu-branding")!.classList.remove("show");
@@ -56,11 +58,13 @@ export default class NavBar extends Component<FuncProps, State> {
   render() {
     return (
       <header>
-        <a href="/">
-          {" "}
-          <h1 className="logo" /*onClick={this.props.toggleTheme}*/>RS</h1>
-        </a>
-        <div className="closingcircle"></div>
+        <div className="logo">
+          <a href="/">
+            {" "}
+            <h1 /*onClick={this.props.toggleTheme}*/>RS</h1>
+          </a>
+        </div>
+
         <div className="end-section">
           <a className="contact-button" href="/contacts">
             <div className="contact" id="swithTheme">
@@ -76,7 +80,10 @@ export default class NavBar extends Component<FuncProps, State> {
               <div className="btn-line" id="swithTheme"></div>
               <div className="btn-line" id="swithTheme"></div>
             </div>
-            <img alt="blob" src={Blob} className="menublob" />
+            <div className="blob">
+              <img alt="blob" src={Blob} className="menublob" />
+              <div className="closingcircle"></div>
+            </div>
             <div className="menu">
               <img alt="" src={seperatingMenu} />
               <NavLink
