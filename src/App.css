@@ -72,7 +72,7 @@ a{
 
 
 /* NavBar */
-header{
+.header{
     margin-top: 0rem;
     padding: 1.5rem 0rem;
     width: 100vw;
@@ -81,6 +81,9 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    z-index: 0;
+}
+.header.open{
     z-index: 9999;
 }
 .end-section{
@@ -92,10 +95,10 @@ header{
     padding: 0 2rem;
     margin-right: 1rem;
 }
-header .logo{
+.header .logo{
     z-index: 9999;
 }
-header .logo h1{
+.header .logo h1{
     font-size: 2.25rem;
     font-family: 'Inspiration', cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
@@ -200,16 +203,18 @@ header .logo h1{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    z-index: 0;
+    z-index: 2;
 }
 .blob.open{
-    z-index: 5000;
+    z-index: 9997;
 }
 @media (max-height: 653px) {
     .blob{
-        height: 700%;
+        height: 560%;
     }
 }
+
+
     .closingcircle{
         background-color: var(--color-primary-0);
         position: absolute;
@@ -277,6 +282,7 @@ header .logo h1{
         top: 0;
         right: 0;
         opacity: 1;
+        z-index: 9999;
     }
     .menu #links{
         font-size: 2.25rem;
@@ -388,6 +394,43 @@ header .logo h1{
         }
     
     }
+    @media (max-height: 600px) {
+        .menu.open{
+            height: auto;
+            top: 80px;
+        }
+        .menu #links{
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: .75rem;
+        }
+        .seperatingMenu{
+            width: 40px;
+            height: auto;
+        }
+        .blob.open{
+            height: 99vh;
+            overflow: hidden;
+            border-bottom-left-radius: 10rem;
+        }
+    }
+    @media (max-height:350px) {
+    .blob.open{
+        height: 370px;
+    }
+}
+    @media (max-width: 300px) {
+        .header .logo h1 {
+            padding: 0;
+            padding-left: 0;
+        }
+    }
+    @media (max-width: 230px) {
+        .header .logo h1 {
+            font-size: 1.75rem;
+        }
+    }
+
 /* NavBar */
 
 
@@ -398,11 +441,12 @@ header .logo h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
 }
 .content{
     display: flex;
     flex-direction: column;
-    z-index: 9999;
+    z-index: 9998;
 }
 .content h1{
     font-size: 48px;
@@ -497,7 +541,7 @@ header .logo h1{
     top: 43%;
     left: -230px;
     border-bottom: 1px solid rgba(255, 254, 254, 0.17);
-    z-index: 9999;
+    z-index: 1;
 }
 .title h1 span{
     font-size: 7.875rem;
@@ -653,7 +697,7 @@ header .logo h1{
 
 .about-content{
     border: 1px solid;
-    z-index: 9999;
+    z-index: 9997;
 }
 .information{
     width: 40%;
@@ -661,7 +705,7 @@ header .logo h1{
     margin-left: 220px;
     display: flex;
     flex-direction: column;
-    z-index: 9999;
+    z-index: 9997;
 }
 .information h1{
     font-size: 4rem;
@@ -972,6 +1016,7 @@ header .logo h1{
     font-size: 64px;
     margin-bottom: 6rem;
     text-align: center;
+    z-index: 10;
 }
 .contact-area{
     display: flex;
@@ -1013,7 +1058,7 @@ header .logo h1{
     align-items: center;
     transition: ease 500ms ;
     overflow-x: hidden;
-    z-index: 9999;
+    z-index: 2;
 }
 
 .user-git{
@@ -1047,7 +1092,53 @@ header .logo h1{
 .email-area:hover > .user-email{
     opacity: 1;
 }
+@media (max-width:615px) {
+    .icons{
+        width: 99vw;
+    }
+}
+@media (max-width:550px) {
+    .contact-area{
+        width: 90vw;
+    }
+    .contact-area h2{
+        font-size: 3rem;
+    }
 
+}
+@media (max-height:710px) {
+    .contact-area{
+        margin-top: 80px;
+        padding: 100px 0;
+    }
+}
+@media (max-height: 640px){
+    .main.contacts{
+        height: 100%;
+    }
+}
+@media (max-width:450px) {
+    .git-area:hover{
+        width: 74px;
+    }
+    .email-area:hover{
+        width: 74px;
+    }
+}
+@media (max-width:360px) {
+    .contact-area{
+        margin-top: 80px;
+        padding: 100px 0;
+    }    
+    
+}
+@media (min-height: 680px) and (max-width:360px){
+    .main.contacts{
+        height: 100vh;
+    }
+
+
+}
 /* /contacts */
 
 /* .projects */

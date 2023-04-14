@@ -1,4 +1,5 @@
 import { Component } from "react";
+import iconEmail from "../../pictures/EmailContacts.png";
 
 interface FuncProps {
   setRandomColor: any;
@@ -82,7 +83,8 @@ export default class Contacts extends Component<FuncProps, State> {
             </a>
             <a href="mailto:rodilool2@gmail.com?body=I%20am%20interested%20to%20work%20with%20you!">
               <div className="email-area">
-                <div className="icon email"></div>
+                {/* <div className="icon email"></div> */}
+                <img src={iconEmail} className="icon email" alt="asdasd" />
                 <p className="user-email">rodilool2@gmail.com</p>
               </div>
             </a>

@@ -26,6 +26,7 @@ export default class NavBar extends Component<FuncProps, State> {
       document.querySelector(".menublob")!.classList.add("open");
       document.querySelector(".menu")!.classList.add("open");
       document.querySelector(".blob")!.classList.add("open");
+      document.querySelector(".header")!.classList.add("open");
       // document.querySelector(".menu")!.classList.add("show");
       // document.querySelector(".menu-nav")!.classList.add("show");
       // document.querySelector(".menu-branding")!.classList.add("show");
@@ -41,6 +42,7 @@ export default class NavBar extends Component<FuncProps, State> {
       document.querySelector(".menublob")!.classList.remove("open");
       document.querySelector(".menu")!.classList.remove("open");
       document.querySelector(".blob")!.classList.remove("open");
+      document.querySelector(".header")!.classList.remove("open");
       //   document.querySelector(".menu")!.classList.remove("show");
       //   document.querySelector(".menu-nav")!.classList.remove("show");
       //   document.querySelector(".menu-branding")!.classList.remove("show");
@@ -57,7 +59,7 @@ export default class NavBar extends Component<FuncProps, State> {
 
   render() {
     return (
-      <header>
+      <header className="header">
         <div className="logo">
           <a href="/">
             {" "}
@@ -85,7 +87,7 @@ export default class NavBar extends Component<FuncProps, State> {
               <div className="closingcircle"></div>
             </div>
             <div className="menu">
-              <img alt="" src={seperatingMenu} />
+              <img alt="" src={seperatingMenu} className="seperatingMenu" />
               <NavLink
                 id="links"
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
@@ -95,7 +97,7 @@ export default class NavBar extends Component<FuncProps, State> {
               >
                 HOME
               </NavLink>
-              <img alt="" src={seperatingMenu} />
+              <img alt="" src={seperatingMenu} className="seperatingMenu" />
               <NavLink
                 id="links"
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
@@ -104,7 +106,7 @@ export default class NavBar extends Component<FuncProps, State> {
               >
                 ABOUT ME
               </NavLink>
-              <img alt="" src={seperatingMenu} />
+              <img alt="" src={seperatingMenu} className="seperatingMenu" />
               <NavLink
                 id="links"
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
@@ -113,7 +115,7 @@ export default class NavBar extends Component<FuncProps, State> {
               >
                 PROJECTS
               </NavLink>
-              <img alt="" src={seperatingMenu} />
+              <img alt="" src={seperatingMenu} className="seperatingMenu" />
               <NavLink
                 id="links"
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
@@ -122,7 +124,7 @@ export default class NavBar extends Component<FuncProps, State> {
               >
                 CONTACTS
               </NavLink>
-              <img alt="" src={seperatingMenu} />
+              <img alt="" src={seperatingMenu} className="seperatingMenu" />
             </div>
           </div>
         </div>
