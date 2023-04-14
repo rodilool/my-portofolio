@@ -76,7 +76,15 @@ const App: React.FC<Props> = (props: Props) => {
           />
         </Route>
         <Route>
-          <Route path="/contacts" element={<Contacts />} />
+          <Route
+            path="/contacts"
+            element={
+              <Contacts
+                setRandomColor={setRandomColor}
+                setColorToDefault={setColorToDefault}
+              />
+            }
+          />
         </Route>
         <Route>
           <Route

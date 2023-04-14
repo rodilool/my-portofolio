@@ -12,6 +12,24 @@ html{
 a{
     text-decoration: none;
 }
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0);
+  }
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.3);
+  }
+::-webkit-scrollbar-thumb:hover{
+  	background: rgba(0,0,0,0.4);
+  }
+::-webkit-scrollbar-thumb:active{
+  	background: rgba(0,0,0,.9);
+  }
 :root {
     --color-primary-0: #000000;
     --color-action-0: #00ffff;
@@ -26,7 +44,7 @@ a{
         background-color: var(--color-primary-0);
 
         background:  url("./pictures/asd-modified.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
-        box-shadow: inset 0px 100px 250px  10000px rgba(0, 0, 0, 0.92);        
+        box-shadow: inset 0px 100px 250px  10000px rgba(0, 0, 0, 0.801);        
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -152,8 +170,6 @@ header .logo{
     .menu-btn {
         position: relative;
         z-index: 99999;
-        /* right: 35px;
-        top: 40px; */
         cursor: pointer;
         transition: all 0.5s ease-out;
     }   /* Styling the hamburger lines */
@@ -262,37 +278,50 @@ header .logo{
                       1px 1.5px 0 #ffffff,
                      1px -1px 0 #ffffff;
     }
-    /* Styling the position of the menu icon */
-    /* .menu {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        opacity: 0.9;
-        visibility: hidden;
+
+    @media (max-width:900px) {
+        header .logo{
+            font-size: 2rem;
+            padding: 0;
+            padding-left: 1.5rem;
+        }
+        .end-section{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            justify-self: flex-end;
+            padding: 0 0rem;
+            margin-right: 1rem;
+        }
+        .contact-button{
+            width: 92px;
+            height: 33px;
+            margin: -8px 1rem 0 1rem;
+        }
+        .contact{
+            left: 9px;
+            font-size: .875rem;
+        }
+        .contact.hover{
+            font-size: .875rem;
+            left: -100px;
+            width: 92px;
+            height: 33px;
+            
+        }
+        .menu-btn .btn-line {
+            width: 30px;
+            height: 3px;
+            margin: 0 0 8px 0;
+        }
+    
+        /* Styling the three lines to make it an X */
+        .menu-btn.close .btn-line:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+    
     }
-
-    .menu.show {
-        visibility: visible;
-    } */
-
-    /* Adding a transition delay
-      to the 4 items in the
-      navigation menu */
-    /* .nav-item:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-
-    .nav-item:nth-child(2) {
-        transition-delay: 0.2s;
-    }
-
-    .nav-item:nth-child(3) {
-        transition-delay: 0.3s;
-    }
-
-    .nav-item:nth-child(4) {
-        transition-delay: 0.4s;
-    } */
 /* NavBar */
 
 
@@ -403,7 +432,7 @@ header .logo{
     border-bottom: 1px solid rgba(255, 254, 254, 0.17);
 }
 .title h1 span{
-    font-size: 126px;
+    font-size: 7.875rem;
     color:rgba(255, 254, 254, 0.17);
     cursor: pointer;
 }
@@ -447,9 +476,7 @@ header .logo{
     filter: drop-shadow(1px 1px 4px white);
     transition: ease 150ms 75ms;
 }
-@keyframes identifier {
 
-}
 .circles{
     position: absolute;
     display: flex;
@@ -482,7 +509,7 @@ header .logo{
     animation: spin 25s linear infinite;
 }
 .spin.last{
-    animation: spin 32s linear infinite;
+    animation: spin 12s linear infinite;
 }
 
 .circle.last{    
@@ -514,38 +541,38 @@ header .logo{
 /* background-image: url('./pictures/'); */
 .ball.a{
     transform: translate(300px, -260px);
-    background-image: url('./pictures/redux\ react.png');
+    background-image: url('./pictures/redux\ reactlarge.png');
     z-index: 0;
 
 }
 
 .ball.c{
     transform: translate(-100px, 218px);
-    background-image: url('./pictures/Typescript_logo_2020\ 1.png');
+    background-image: url('./pictures/Typescript_logo_2020\ 1large.png');
 }
 .ball.f{
     transform: translate(-185px, 0px);
-    background-image: url('./pictures/HTML.png');
+    background-image: url('./pictures/HTMLlarge.png');
 }
 .ball.g{
     transform: translate(-50px, -190px);
-    background-image: url('./pictures/CSS.png');
+    background-image: url('./pictures/CSSlarge.png');
 }
 .ball.h{
     transform: translate(90px, -270px);
-    background-image: url('./pictures/GitHub.png');
+    background-image: url('./pictures/GitHublarge.png');
 }
 .ball.i{
     transform: translate(-250px, -220px);
-    background-image: url('./pictures/git.png');
+    background-image: url('./pictures/gitlarge.png');
 }
 .ball.d{
     transform: translate(223px);
-    background-image: url('./pictures/React\ ball.png');
+    background-image: url('./pictures/React\ balllarge.png');
 }
 .ball.e{
     transform: translate(60px, 60px);
-    background-image: url('./pictures/JS.png');
+    background-image: url('./pictures/JSlarge.png');
 }
 
 
@@ -565,7 +592,7 @@ header .logo{
     margin-left: 220px;
     display: flex;
     flex-direction: column;
-    z-index: 9999;
+    z-index: 15;
 }
 .information h1{
     font-size: 4rem;
@@ -591,7 +618,6 @@ header .logo{
     margin: 2rem 0 1rem;
     height: 456px;
     width: 342px;
-    height: 456px;
     border-radius: 25px;
 }
 
@@ -607,6 +633,225 @@ header .logo{
 }
 .information .row .funFacts li{
     margin: .5rem 1rem;
+    font-size: 0.875rem;
+}
+@media (max-width: 1512px) {
+    .information .row .funFacts li{
+        font-size: 12px;
+    }
+    .circles{
+        bottom: 9%;
+        right: 3%;
+    }
+    .information{
+        margin-left: 160px;
+    }
+    .title{
+        left:-250px;
+    }
+}
+@media (max-height:970px) {
+    .circles{
+        bottom: 5%;
+        right: 3%;
+    }
+}
+@media (max-height:940px) or (max-width:1406px) {
+    .circles{
+        width: 525px;
+        height: 525px;
+        bottom: 8%;
+        right: 4%;
+    }
+    .circle.last{    
+        width: 525px;
+        height: 525px;
+    }
+    .circle.mid{
+        left: 18%;
+        bottom: 12%;
+        width: 349px;
+        height: 349px;
+    }
+    .circle.first{
+        left: 35%;
+        bottom: 25%;
+        width: 194px;
+        height: 194px;
+    }
+    .ball{
+        width: 57px;
+        height: 57px;
+    }
+    .ball.a{
+        transform: translate(200px, -160px);
+        background-image: url('./pictures/redux\ reactmed.png');
+    }
+    .ball.c{
+        transform: translate(60px, 118px);
+        background-image: url('./pictures/Typescript_logo_2020\ 1med.png');
+    }
+    .ball.f{
+        transform: translate(-115px, 0px);
+        background-image: url('./pictures/HTMLmed.png');
+    }
+    .ball.g{
+        transform: translate(-30px, -120px);
+        background-image: url('./pictures/CSSmed.png');
+    }
+    .ball.h{
+        transform: translate(70px, -170px);
+        background-image: url('./pictures/GitHubmed.png');
+    }
+    .ball.i{
+        transform: translate(-150px, -150px);
+        background-image: url('./pictures/gitmed.png');
+    }
+    .ball.d{
+        transform: translate(-170px, 70px);
+        background-image: url('./pictures/React\ ballmed.png');
+    }
+    .ball.e{
+        transform: translate(40px, 40px);
+        background-image: url('./pictures/JSmed.png');
+    }
+    .information{
+        width: 45%;
+    }
+}
+@media (max-height: 885px) {
+    .information .row img{
+        width: 200px;
+        height: 267px;
+    }
+}
+@media (max-height: 737px) or (max-width:1105px){
+    .title{
+        left: -195px;
+    }
+    .title h1 span{
+        font-size: 6rem;
+    }
+    .information{
+        margin-left: 130px;
+    }
+}
+@media (max-height: 700px) {
+    .information{
+        margin-top: 100px;
+    }
+    .title{
+        top: 350px;
+    }
+    .circles{
+        bottom: 0px;
+        top: 110px;
+    }
+    html{
+        overflow-y: scroll;
+    }
+    .main.about{
+        overflow: visible;
+        display: flex;
+        align-items: center;
+    }
+    .main{
+        height: auto;
+    }
+}
+@media (max-width:900px) {
+    .information{
+        width: 80%;
+    }
+    .information .row .funFacts{
+        width: 250px;
+    }
+}
+@media (max-width:713px) {
+    .title{
+        display: none;
+    }
+    .information{
+        margin-left: 20px;
+        width: 90%;
+    }
+}
+@media (max-width:595px) {
+    .circles{
+        width: 330px;
+        height: 330px;
+    }
+    .circle.last{    
+        width: 330px;
+        height: 330px;
+    }
+    .circle.mid{
+        left: 18%;
+        bottom: 12%;
+        width: 216px;
+        height: 216px;
+    }
+    .circle.first{
+        left: 35%;
+        bottom: 25%;
+        width: 119px;
+        height: 119px;
+    }
+    .ball{
+        width: 36px;
+        height: 36px;
+    }
+    .ball.a{
+        transform: translate(120px, -110px);
+        background-image: url('./pictures/redux\ reactsmall.png');
+    }
+    .ball.c{
+        transform: translate(38px, 74px);
+        background-image: url('./pictures/Typescript_logo_2020\ 1small.png');
+    }
+    .ball.f{
+        transform: translate(-70px, 0px);
+        background-image: url('./pictures/HTMLsmall.png');
+    }
+    .ball.g{
+        transform: translate(-20px, -76px);
+        background-image: url('./pictures/CSSsmall.png');
+    }
+    .ball.h{
+        transform: translate(50px, -100px);
+        background-image: url('./pictures/GitHubsmall.png');
+    }
+    .ball.i{
+        transform: translate(-90px, -98px);
+        background-image: url('./pictures/gitsmall.png');
+    }
+    .ball.d{
+        transform: translate(-100px, 48px);
+        background-image: url('./pictures/React\ ballsmall.png');
+    }
+    .ball.e{
+        transform: translate(20px, 25px);
+        background-image: url('./pictures/JSsmall.png');
+    }
+    .information{
+        width: 90%;
+    }
+}
+
+@media (max-width: 457px) {
+    .information {
+        width: 95%;
+    }
+    .information .row .funFacts li{
+        font-size: .55rem;
+    }
+    .information .row .funFacts h4{
+        font-size: .75rem;
+    }
+    .information h1{
+        font-size: 3rem;
+        line-height: 30px;
+    }
 }
 /* /.about-me */
 
