@@ -354,8 +354,9 @@ a{
     @media (max-width:900px) or (max-height: 800px) {
         header .logo{
             font-size: 2rem;
+            margin-left: -.75rem;
             padding: 0;
-            padding-left: 1.5rem;
+            padding-left: 0;
         }
         .end-section{
             display: flex;
@@ -441,12 +442,13 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 15;
 }
 .content{
     display: flex;
     flex-direction: column;
-    z-index: 9998;
+    z-index: 15;
+    align-items: center;
 }
 .content h1{
     font-size: 48px;
@@ -480,6 +482,7 @@ a{
     flex-direction: row;
     justify-content: space-around;
     margin-top: 25px;
+    width: 100%;
 }
 .button{
     border-radius: 20px;
@@ -492,12 +495,6 @@ a{
     align-items: center;
     justify-content: center;
     
-}
-.projects{
-    background-color: var(--color-action-0);
-}
-.about-me{
-    background-color: var(--color-secondary-0);
 }
 .button p{
     color: rgb(7, 7, 7);
@@ -524,6 +521,108 @@ a{
         width:15px;
         clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
       }
+.projects{
+    background-color: var(--color-action-0);
+}
+.about-me{
+    background-color: var(--color-secondary-0);
+}
+
+
+
+    @media (max-width:900px) or (max-height: 800px){
+        .button p{
+            font-size: 1.5rem;
+        }
+        .line{
+            width: 15px;
+            height: 3px;
+        }
+        .button .arrow{
+            width: 15px;
+            height: 18px;
+        }
+    }
+    @media (max-width:730px) or (max-height: 715px) {
+        .content h1{
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        .content h1 .iam {
+            font-size: 24px;
+        }
+        .content h1 .world{
+            font-size: 52px;
+            color: var(--color-action-0);
+        }
+        .content h1 .exclamation{
+            font-size: 52px;
+        }
+        .content h1 .name {
+            font-size: 36px;
+            color: var(--color-action-0);
+        }    
+    }
+    @media (max-width:420px) {
+        .button p{
+            font-size: 1.15rem;
+        }
+        .line{
+            width: 7px;
+            height: 3px;
+        }
+        .button .arrow{
+            width: 10px;
+            height: 15px;
+        }
+        .button{
+            padding: .75rem .25rem;
+        }
+        .content h1{
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .content h1 .iam {
+            font-size: 16px;
+        }
+        .content h1 .world{
+            font-size: 40px;
+            color: var(--color-action-0);
+        }
+        .content h1 .exclamation{
+            font-size: 40px;
+        }
+        .content h1 .name {
+            font-size: 24px;
+            color: var(--color-action-0);
+        } 
+    }
+    @media (max-width:280px) {
+        .button-section{
+            flex-direction: column;
+            width: 50%;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0;
+        }
+        .button{
+            margin-top: 15px;
+        }
+        
+    }
+    @media (max-height: 500px) {
+        .content{
+            position: relative;
+            margin-top: 10px;
+        }
+        .main-section{
+            height: 580px;
+            background-size: cover;
+            background-repeat: repeat-y;
+        }
+    }
 /* /Home */
 
 
