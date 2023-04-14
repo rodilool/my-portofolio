@@ -9,6 +9,7 @@
 html{
     overflow: hidden;
 }
+
 a{
     text-decoration: none;
 }
@@ -203,11 +204,17 @@ header .logo{
         top: -220px;
         transition: 350ms ease-out;
         z-index: 9999;
+/* help */
+        display: none; 
+
     }
     .closingcircle.open{
         filter: drop-shadow(1px 1px 4px var(--color-primary-0));
         right: -100px;
         top: -120px;
+/* help */
+        display: block;
+        overflow: hidden;
     }
     .menu-btn.close {
         transform: rotate(180deg);
@@ -229,14 +236,19 @@ header .logo{
         position: absolute;
         top: -500px;
         right: -1000px;
-        width: 1000px;
+        width: ;
         height: 1000px;
-        z-index: 9997;
-        /* display: none; does give more performance*/
+        z-index: 9997; 
         transition: 650ms ease-out;
+        /* help */
+        display: none; 
+overflow: hidden;
+       
     }
     .menublob.open{
-        /* display: block; does give more performance*/
+        /* help */
+        display: block; 
+
         top: -200px;
         right: -500px;
         
@@ -246,7 +258,6 @@ header .logo{
         width: 300px;
         height: 600px;
         z-index: 9998;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -254,12 +265,16 @@ header .logo{
         right: -300px;
         transition: 500ms ease-out;
         opacity: 0;
-        /* display: none; does give more performance*/
+        /* help */
+        overflow: hidden;
+        display: none; 
     }
     .menu.open{
         top: 0;
         right: 0;
-        /* display: block; does give more performance*/
+/* help */
+        display: flex; 
+
         opacity: 1;
     }
     .menu #links{
@@ -278,7 +293,9 @@ header .logo{
                       1px 1.5px 0 #ffffff,
                      1px -1px 0 #ffffff;
     }
-
+    @media () {
+        
+    }
     @media (max-width:900px) {
         header .logo{
             font-size: 2rem;
