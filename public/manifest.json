@@ -4,18 +4,18 @@
   "icons": [
     {
       "src": "RS.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "61x43",
       "type": "image/png"
     },
     {
       "src": "RS.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "61x43"
     },
     {
       "src": "RS.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "61x43"
     }
   ],
   "start_url": ".",
