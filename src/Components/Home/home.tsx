@@ -33,8 +33,8 @@ class Home extends React.Component<Props, State> {
             {/* might import nav link for this */}
             <a href="/projects">
               <div className="button projects">
-                <div className="line"></div>
-                <div className="arrow"></div>
+                {/* <div className="line"></div>
+                <div className="arrow"></div> */}
                 <p>PROJECTS</p>
               </div>
             </a>
@@ -42,8 +42,8 @@ class Home extends React.Component<Props, State> {
             <a href="/about-me">
               {" "}
               <div className="button about-me">
-                <div className="line"></div>
-                <div className="arrow"></div>
+                {/* <div className="line"></div>
+                <div className="arrow"></div> */}
 
                 <p>ABOUT ME</p>
               </div>

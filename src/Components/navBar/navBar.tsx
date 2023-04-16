@@ -20,41 +20,29 @@ export default class NavBar extends Component<FuncProps, State> {
   // Set the initial state of the menu
 
   toggleMenu = () => {
-    if (this.state.showMenu === false) {
-      document.querySelector(".menu-btn")!.classList.add("close");
-      document.querySelector(".closingcircle")!.classList.add("open");
-      document.querySelector(".menublob")!.classList.add("open");
-      document.querySelector(".menu")!.classList.add("open");
-      document.querySelector(".blob")!.classList.add("open");
-      document.querySelector(".header")!.classList.add("open");
-      // document.querySelector(".menu")!.classList.add("show");
-      // document.querySelector(".menu-nav")!.classList.add("show");
-      // document.querySelector(".menu-branding")!.classList.add("show");
-      // document
-      //   .querySelectorAll(".nav-item")
-      //   .forEach((item) => item.classList.add("show"));
-      this.setState({
-        showMenu: true,
-      });
-    } else {
-      document.querySelector(".menu-btn")!.classList.remove("close");
-      document.querySelector(".closingcircle")!.classList.remove("open");
-      document.querySelector(".menublob")!.classList.remove("open");
-      document.querySelector(".menu")!.classList.remove("open");
-      document.querySelector(".blob")!.classList.remove("open");
-      document.querySelector(".header")!.classList.remove("open");
-      //   document.querySelector(".menu")!.classList.remove("show");
-      //   document.querySelector(".menu-nav")!.classList.remove("show");
-      //   document.querySelector(".menu-branding")!.classList.remove("show");
-      //   document
-      //     .querySelectorAll(".nav-item")
-      //     .forEach((item) => item.classList.remove("show"));
-
-      //   // Reset the menu state
-      this.setState({
-        showMenu: false,
-      });
-    }
+    setTimeout(() => {
+      if (this.state.showMenu === false) {
+        document.querySelector(".menu-btn")!.classList.add("close");
+        document.querySelector(".closingcircle")!.classList.add("open");
+        document.querySelector(".menublob")!.classList.add("open");
+        document.querySelector(".menu")!.classList.add("open");
+        document.querySelector(".blob")!.classList.add("open");
+        document.querySelector(".header")!.classList.add("open");
+        this.setState({
+          showMenu: true,
+        });
+      } else {
+        document.querySelector(".menu-btn")!.classList.remove("close");
+        document.querySelector(".closingcircle")!.classList.remove("open");
+        document.querySelector(".menublob")!.classList.remove("open");
+        document.querySelector(".menu")!.classList.remove("open");
+        document.querySelector(".blob")!.classList.remove("open");
+        document.querySelector(".header")!.classList.remove("open");
+        this.setState({
+          showMenu: false,
+        });
+      }
+    }, 150);
   };
 
   render() {

@@ -115,8 +115,8 @@ class AboutMe extends React.Component<FuncProps, State> {
             I am an enthusiastic Front-end engineer.<br></br> I am always
             looking to expand my knowledge by self-motivation and
             self-discipline while also integrate myself with other engineers so
-            we can grow together. I’m always open to constructive criticism
-            because no one learns by receiving pats on the back.
+            we can grow together. I’m always open to feedback because no one
+            learns by receiving pats on the back.
           </p>
           <a
             href="https://drive.google.com/file/d/1CXF5uenh0bScMCCLVU7590woWhs6htc0/view?usp=share_link"

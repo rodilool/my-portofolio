@@ -71,7 +71,7 @@ export default class Contacts extends Component<FuncProps, State> {
           </h1>
         </div>
         <div className="contact-area">
-          <h2>DON’T BE SHY TO GET IN TOUCH!</h2>
+          <h2>Ready to collaborate? Let's talk!</h2>
           <div className="icons">
             <a href="https://github.com/rodilool" target="_Blank">
               <div className="git-area">
