@@ -9,8 +9,16 @@ import Projects from "./Components/projects/projects";
 
 interface Props {}
 
+interface State {
+  showMenu: boolean;
+}
+
 const App: React.FC<Props> = (props: Props) => {
   const [lightMode, setLightMode] = useState("default");
+  const [showMenu, setShowMenu] = useState(false);
+  // this.state = {
+  //   showMenu: false,
+  // };
 
   const toggleTheme = () => {
     const localTheme = window.localStorage.getItem("lightMode");
@@ -56,10 +64,30 @@ const App: React.FC<Props> = (props: Props) => {
   function setColorToDefault(obj: any) {
     obj.style.textShadow = ``;
   }
+  document.addEventListener("click", function (event) {
+    if (
+      !document.querySelector(".menu")!.contains(event.target as Node) &&
+      !document.querySelector(".menu-btn")!.contains(event.target as Node)
+    ) {
+      document.querySelector(".closingcircle")!.classList.remove("open");
+      document.querySelector(".menu")!.classList.remove("open");
+      setTimeout(() => {
+        document.querySelector(".menublob")!.classList.remove("open");
+        document.querySelector(".menu-btn")!.classList.remove("close");
+        document.querySelector(".blob")!.classList.remove("open");
+        document.querySelector(".header")!.classList.remove("open");
 
+        setShowMenu(false);
+      }, 300);
+    }
+  });
   return (
     <BrowserRouter>
-      <NavBar toggleTheme={toggleTheme} />
+      <NavBar
+        toggleTheme={toggleTheme}
+        setShowMenu={setShowMenu}
+        showMenu={showMenu}
+      />
       <Routes>
         <Route>
           <Route path="/" element={<Home />} />
