@@ -429,11 +429,15 @@ a{
         .blob.open{
             display: none;
         }
+        .menu{
+            display: none;
+        }
         .menu.open{
             background-color: var(--color-third-0);
             max-width: 420px;
             max-height: 1000px;
             top: 0;
+            display: flex;
             right: 0;
         }
         .menublob.open{
