@@ -1085,7 +1085,7 @@ a{
 }
 @media (min-height: 641px){
     .main.about{
-        height: 100vh;
+        height: 100dvh;
     }
     html{
         overflow-y: scroll;
