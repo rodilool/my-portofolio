@@ -1080,7 +1080,7 @@ a{
         overflow: hidden;
         display: flex;
         align-items: center;
-        width: 100dvw;
+        width: 100vw;
     }
 }
 @media (min-height: 641px){
@@ -1134,7 +1134,7 @@ a{
         width: 90%;
     }
 }
-@media (max-width:595px) or (max-height:637px){
+@media (max-width:830px) or (max-height:637px){ /*a*/
     .circles{
         width: 330px;
         height: 330px;
@@ -1195,6 +1195,7 @@ a{
     }
     
 }
+@
 @media (max-width:595px) {
     .information{
         width: 90%;
