@@ -276,7 +276,22 @@ a{
         }
     }
 }
-
+@media (max-width: 425px) {
+    .blob.open{
+        display: none;
+    }
+    .menu.open{
+        background-color: var(--color-third-0);
+        width: 100vw;
+        max-height: 100vh;
+        top: 0;
+        right: 0;
+    }
+    .menublob.open{
+        height: 100vh;
+        position: relative;
+    }
+}
 
     .closingcircle{
         background-color: var(--color-primary-0);
@@ -411,23 +426,19 @@ a{
         }
     }
     @media (orientation:portrait){
-        .closingcircle{
-            display: none;
-        }
-        .closingcircle.open{
-            display: block;
-        }
-        .menublob{
-            display: none;
-        }
-        .menublob.open{
-            display: block;
-        }
-        .menu{
+        .blob.open{
             display: none;
         }
         .menu.open{
-            display: flex;
+            background-color: var(--color-third-0);
+            max-width: 420px;
+            max-height: 1000px;
+            top: 0;
+            right: 0;
+        }
+        .menublob.open{
+            height: 100vh;
+            position: relative;
         }
     }
     @media (min-width: 1350px) and (min-height: 640px){
@@ -1445,6 +1456,10 @@ a{
     cursor: pointer;
     -webkit-animation: swing-in-top-fwd 0.75s cubic-bezier(0.550, 0.085, 0.680, 0.530) both .5s;
     animation: swing-in-top-fwd 0.75s cubic-bezier(0.550, 0.085, 0.680, 0.530) both .5s;
+    z-index: 1;
+}
+.banner a:hover{
+    filter: brightness(40%);
 }
 .banner .responsive .stacks{
     display: flex;
@@ -1485,6 +1500,15 @@ a{
 }
 .banner .responsive  .summary p{
     text-align: center;
+}
+
+.banner a .onHover{
+    display: block;
+    top: -500px;
+    position: relative;
+    text-align: center;
+    z-index: 
+    2;
 }
 @media (max-width: 1170px) {
     .banner{

@@ -71,9 +71,9 @@ const App: React.FC<Props> = (props: Props) => {
     ) {
       document.querySelector(".closingcircle")!.classList.remove("open");
       document.querySelector(".menu")!.classList.remove("open");
+      document.querySelector(".menu-btn")!.classList.remove("close");
       setTimeout(() => {
         document.querySelector(".menublob")!.classList.remove("open");
-        document.querySelector(".menu-btn")!.classList.remove("close");
         document.querySelector(".blob")!.classList.remove("open");
         document.querySelector(".header")!.classList.remove("open");
 

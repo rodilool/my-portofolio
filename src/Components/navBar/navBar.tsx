@@ -23,10 +23,10 @@ export default class NavBar extends Component<FuncProps, State> {
       document.querySelector(".menu")!.classList.add("open");
       document.querySelector(".closingcircle")!.classList.add("open");
       document.querySelector(".header")!.classList.add("open");
+      document.querySelector(".menu-btn")!.classList.add("close");
       setTimeout(() => {
         if (this.props.showMenu === false) {
           document.querySelector(".menublob")!.classList.add("open");
-          document.querySelector(".menu-btn")!.classList.add("close");
           document.querySelector(".blob")!.classList.add("open");
 
           this.props.setShowMenu(true);
@@ -38,7 +38,6 @@ export default class NavBar extends Component<FuncProps, State> {
       document.querySelector(".menu-btn")!.classList.remove("close");
       setTimeout(() => {
         document.querySelector(".menublob")!.classList.remove("open");
-
         document.querySelector(".blob")!.classList.remove("open");
         document.querySelector(".header")!.classList.remove("open");
 
