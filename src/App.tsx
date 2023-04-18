@@ -83,40 +83,10 @@ const App: React.FC<Props> = (props: Props) => {
   });
   return (
     <BrowserRouter>
-      <NavBar
-        toggleTheme={toggleTheme}
-        setShowMenu={setShowMenu}
-        showMenu={showMenu}
-      />
       <Routes>
         <Route>
-          <Route path="/" element={<Home />} />
-        </Route>
-        <Route>
           <Route
-            path="/about-me"
-            element={
-              <AboutMe
-                setRandomColor={setRandomColor}
-                setColorToDefault={setColorToDefault}
-              />
-            }
-          />
-        </Route>
-        <Route>
-          <Route
-            path="/contacts"
-            element={
-              <Contacts
-                setRandomColor={setRandomColor}
-                setColorToDefault={setColorToDefault}
-              />
-            }
-          />
-        </Route>
-        <Route>
-          <Route
-            path="/projects"
+            path="/"
             element={
               <Projects
                 setRandomColor={setRandomColor}
