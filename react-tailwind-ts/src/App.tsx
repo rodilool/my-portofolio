@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import "./Components/global_styles/global.styles.scss";
 import Cursor from "./Components/cursor/cursor";
 import NavBar from "./Components/modules/navBar/navBar";
+import AboutMe from "./Components/sections/about_me/about_me";
 import HeroSection from "./Components/sections/hero_section/hero_section";
-import { motion } from "framer-motion";
 
 function App() {
   const [isNavBarHovered, setIsNavBarHovered] = useState(false);
@@ -23,6 +23,7 @@ function App() {
         onMouseOver={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       />
+      <AboutMe />
     </>
   );
 }

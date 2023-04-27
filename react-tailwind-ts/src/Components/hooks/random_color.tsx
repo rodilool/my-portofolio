@@ -15,4 +15,4 @@ function setColorToDefault(obj: any) {
   obj.style.textShadow = ``;
 }
 
-export { getRandomColor };
+export { getRandomColor, setRandomColor, setColorToDefault };

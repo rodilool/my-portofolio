@@ -1,0 +1,84 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .content{
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        padding: 3rem 0;
+        @media (max-width: 680px) {
+            width: 96%;
+        }
+        .title{
+            writing-mode:vertical-lr;
+            border-right: 1px solid rgba(255, 254, 254, 0.17);
+            justify-self: center;
+            align-self: center;
+            @media (max-width: 680px) {
+                display: none;
+            }
+            h1 {
+                line-height: 7rem;
+                span{
+                    font-size: 7.875rem;
+                    color: transparent;
+                }
+                .letter{
+                    font-size: 7.875rem;
+                    color:rgba(255, 254, 254, 0.17);
+                    &:hover{
+                        filter: drop-shadow(1px 1px 4px white);
+                        transition: ease 150ms 75ms;
+                    }
+                }
+            }
+        }
+        .about{
+            padding:0 2rem;
+            h1{
+                padding: 1rem 0;
+                font-size: 4rem;
+                line-height: 3.8rem;
+            }
+            p{
+                padding: 1rem 0;
+                font-size: 1rem;
+            }
+            a{
+                color: #0ff;
+                padding: 1rem 0;
+                font-style: italic;
+            }
+            .row{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                img{
+                    border-radius: 1.75rem;
+                    @media (max-width:560px) {
+                        width: 100%;
+                    }
+                }
+                .funFacts{
+                    display: flex;
+                    align-items: center;
+                    div{
+                        padding-left: 4rem;
+                        padding-top: 2rem;
+                        max-width: 260px;
+                        h4{
+                            padding-bottom: 1rem;
+                        }
+                        ul li{
+                            padding: 0.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
