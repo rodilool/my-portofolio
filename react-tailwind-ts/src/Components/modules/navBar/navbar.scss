@@ -1,0 +1,61 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+a{
+    cursor: none;
+}
+nav.scroll{
+    background-image: linear-gradient(180deg, #000000 0%, #00000036 100%);
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 1.25rem 0;
+    align-items: center;
+    position: fixed;
+    z-index: 9998;
+    .logo{
+        mix-blend-mode: difference;
+        margin-left: 2rem;
+        cursor: none;
+        h1{
+            font-size: 2.25rem;
+            font-family: 'Inspiration', cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            mix-blend-mode: normal;
+            
+        }
+    }
+    .contact-button{
+        display: flex;
+        padding: .65rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 100vw;
+        border: 3px solid var(--accent-600);
+        color: whitesmoke;
+        margin-right: 2rem;
+        background-size: 250% 100%;
+        background-position: 100%;
+        background-image: linear-gradient(90deg, rgba(0,255,255,1) 0%, rgba(0,255,255,1) 50%, rgba(0,0,0,0) 50%, rgba(236,255,0,0) 100%);
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .350s ease-in-out 150ms;
+        text-decoration: none;
+        cursor: none;
+        &:hover{
+            background-position: 170%;
+            color: black;
+        }
+        .contact{
+            font-size: 1.25rem;
+        }
+    }
+
+}
