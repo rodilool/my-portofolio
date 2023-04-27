@@ -2,17 +2,16 @@ import React, { useEffect } from "react";
 import "./about_me.scss";
 import PP from "../../../pictures/pp.jpg";
 
-import {
-  getRandomColor,
-  setRandomColor,
-  setColorToDefault,
-} from "../../hooks/random_color";
+import { setRandomColor, setColorToDefault } from "../../hooks/random_color";
 
-interface AboutMeProps {}
+interface AboutMeProps {
+  onMouseOver: any;
+  onMouseLeave: any;
+}
 
 interface AboutMeState {}
 
-function AboutMe() {
+function AboutMe({ onMouseOver, onMouseLeave }: AboutMeProps) {
   return (
     <section className="about_section" id="about">
       <div className="content">
@@ -87,6 +86,8 @@ function AboutMe() {
             href="https://drive.google.com/file/d/1CXF5uenh0bScMCCLVU7590woWhs6htc0/view?usp=share_link"
             target="_blank"
             className="hidden"
+            onMouseEnter={onMouseOver}
+            onMouseLeave={onMouseLeave}
           >
             My curriculum
           </a>

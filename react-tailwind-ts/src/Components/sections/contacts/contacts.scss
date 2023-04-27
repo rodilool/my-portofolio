@@ -1,0 +1,113 @@
+.main.contacts{
+    margin-top: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title{
+        border-bottom: 1px solid rgba(255, 254, 254, 0.17);
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 120px;
+        @media (max-width: 680px) {
+            display: none;
+        }
+        h1 {
+            line-height: 4rem;
+            span{
+                font-size: 7.875rem;
+                color: transparent;
+            }
+            .letter{
+                font-size: 7.875rem;
+                color:rgba(255, 254, 254, 0.17);
+                &:hover{
+                    filter: drop-shadow(1px 1px 4px white);
+                    transition: ease 150ms 75ms;
+                }
+            }
+        }
+    }
+}
+.contact-area h2{
+    font-size: 64px;
+    margin-bottom: 6rem;
+    text-align: center;
+    z-index: 10;
+}
+.contact-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -6rem;
+}
+.icons{
+    width: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon{
+    width: 74px;
+    height: 74px;
+}
+
+.icon.git{
+    background-image: url('../../../pictures/Icons/GitHub/GitHubContacts.png');
+    width: 74px;
+    height: 74px;
+}
+.icon.email{
+    background-image: url('../../../pictures/EmailContacts.png');
+}
+.icon.in{
+    background-image: url('../../../pictures/inContacts.png');
+}
+
+.git-area, .email-area{
+    position: relative;
+    width: 74px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    transition: ease 500ms ;
+    overflow-x: hidden;
+    z-index: 2;
+    padding-bottom: 5rem;
+}
+
+.user-git{
+    position: absolute;
+    margin-left: 2rem;
+    font-size: 1rem;
+    left: 70px;
+    opacity: 0;
+    transition: ease 500ms 150ms;
+}
+.invisible{
+    opacity: 0;
+}
+.user-email{
+    position: absolute;
+    margin-left: 2rem;
+    font-size: 1rem;
+    left: 60px;
+    opacity: 0;
+    transition: ease 500ms 150ms;
+}
+.git-area:hover{
+    width: 225px;
+}
+.email-area:hover{
+    width: 250px;
+}
+.git-area:hover > .user-git{
+    opacity: 1;
+}
+.email-area:hover > .user-email{
+    opacity: 1;
+}

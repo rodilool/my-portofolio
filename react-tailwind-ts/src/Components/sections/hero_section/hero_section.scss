@@ -71,6 +71,9 @@ section.main_section{
                 font-weight: bold;
                 mix-blend-mode: normal;
                 font-size: 1.5rem;
+                @media (max-width: 560px) {
+                    font-size: 1.25rem;
+                }
             }
             .button{
                 
@@ -78,6 +81,9 @@ section.main_section{
                 padding: 0.65rem 1.25rem;
                 mix-blend-mode: normal;
                 margin: 1rem;
+            }
+            @media (max-width: 560px) {
+                padding: 0.5rem 1rem;
             }
             .projects{
                 background-color: #fff;

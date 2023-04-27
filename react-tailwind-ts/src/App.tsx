@@ -4,6 +4,8 @@ import Cursor from "./Components/cursor/cursor";
 import NavBar from "./Components/modules/navBar/navBar";
 import AboutMe from "./Components/sections/about_me/about_me";
 import HeroSection from "./Components/sections/hero_section/hero_section";
+import Portfolio from "./Components/sections/portfolio/portfolio";
+import Contacts from "./Components/sections/contacts/contacts";
 
 function App() {
   const [isNavBarHovered, setIsNavBarHovered] = useState(false);
@@ -41,7 +43,12 @@ function App() {
         onMouseOver={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       />
-      <AboutMe />
+      <AboutMe onMouseOver={handleMouseEnter} onMouseLeave={handleMouseLeave} />
+      <Portfolio />
+      <Contacts
+        onMouseOver={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      />
     </>
   );
 }
