@@ -15,6 +15,24 @@ function App() {
   const handleMouseLeave = () => {
     setIsNavBarHovered(false);
   };
+
+  useEffect(() => {
+    const hiddenElements = document.querySelectorAll(".hidden");
+    console.log(hiddenElements);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    // cleanup function to disconnect the observer when component unmounts
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Cursor isNavBarHovered={isNavBarHovered} />

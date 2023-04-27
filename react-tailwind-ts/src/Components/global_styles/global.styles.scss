@@ -63,7 +63,11 @@
   html{
     cursor: none;
   }
-  
+  @media (max-width: 1100px) and (orientation: landscape) {
+    html{
+      cursor:auto;
+    }
+  }
   html,
   body,
   #__next {
