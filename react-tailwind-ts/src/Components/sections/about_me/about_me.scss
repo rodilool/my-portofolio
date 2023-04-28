@@ -51,6 +51,9 @@
                 color: #0ff;
                 padding: 1rem 0;
                 font-style: italic;
+                &:hover{
+                    color: rgb(0, 138, 138);
+                }
             }
             .row{
                 margin-top: 2rem;

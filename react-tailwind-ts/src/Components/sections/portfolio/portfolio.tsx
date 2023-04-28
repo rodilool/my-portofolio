@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import { setRandomColor, setColorToDefault } from "../../hooks/random_color";
+import { css } from "@emotion/css";
 import phoneWallet1 from "../../../pictures/websites/wallet.png";
 import phoneWallet2 from "../../../pictures/websites/wallet2.png";
 import laptopWallet1 from "../../../pictures/websites/laptopwallet.png";
 import phonePortfolio1 from "../../../pictures/websites/portfolio1.png";
+import CSS from "../../../pictures/Icons/CSS/CSSsmall.png";
+import React from "../../../pictures/Icons/React/React ballsmall.png";
+import Ts from "../../../pictures/Icons/Typescript/Typescript_logo_2020 1small.png";
 import "./portfolio.scss";
 
 interface PortfolioProps {}
@@ -13,6 +16,10 @@ interface PortfolioState {}
 function Portfolio() {
   const [websiteTitle, setWebsiteTitle] = useState("");
   const [websiteDescription, setWebsiteDescription] = useState("");
+  const [websiteLink, setWebsiteLink] = useState("");
+  const [websiteAvailable, setWebsiteAvailable] = useState("");
+  const [Icons_array, setIcons_array] = useState<string[]>([]);
+
   useEffect(() => {
     const startImages = document.querySelectorAll(".start-image");
     const projectDescription = document.querySelector(".project_description");
@@ -29,6 +36,9 @@ function Portfolio() {
                  You can view how much you've spent and recieved this month while also showing you a total of the two.\
                   It was a project that helped me evolve in react but I hope to perfect it and add more features in it's life time."
               );
+              setWebsiteLink("https://moneymindful.vercel.app/");
+              setWebsiteAvailable("block");
+              setIcons_array([CSS, React]);
             } else if (entry.target === document.querySelector(".portfolio")) {
               setWebsiteTitle("Rodrigo Seborro");
               setWebsiteDescription(
@@ -37,6 +47,9 @@ function Portfolio() {
                 get to know some facts and contact me directly so that we\
                 can talk more!"
               );
+              setWebsiteLink("#main");
+              setWebsiteAvailable("block");
+              setIcons_array([CSS, React, Ts]);
             } else if (entry.target === document.querySelector(".pokemon")) {
               setWebsiteTitle("Pokedex");
               setWebsiteDescription(
@@ -46,6 +59,9 @@ function Portfolio() {
                     Format. Want to get to know more about your favourite\
                     pokemon? Visit us!`
               );
+              setWebsiteLink("//");
+              setWebsiteAvailable("none");
+              setIcons_array([]);
             }
           } else {
             projectDescription?.classList.remove("show");
@@ -63,11 +79,36 @@ function Portfolio() {
     return () => observer.disconnect();
   }, []);
 
+  const iterateArray = () => {
+    return Icons_array.map((icon: string) => {
+      return (
+        <img
+          src={icon}
+          alt="icon"
+          className={css`
+            padding: 1rem 1rem;
+          `}
+        />
+      );
+    });
+  };
+
   function displayWebsite() {
     return (
       <>
         <h1>{websiteTitle}</h1>
         <p>{websiteDescription}</p>
+        <a
+          href={websiteLink}
+          target="_blank"
+          className={css`
+            display: ${websiteAvailable};
+            margin-top: 1rem;
+          `}
+        >
+          Visit it now!
+        </a>
+        <>{iterateArray()}</>
       </>
     );
   }
@@ -75,60 +116,6 @@ function Portfolio() {
   return (
     <section className="portfolio_section" id="projects">
       <div className="content">
-        {/* <div className="title hidden">
-          <h1>
-            <span
-              className="letter"
-              onMouseOver={(event) => setRandomColor(event.target)}
-              onMouseOut={(event) => setColorToDefault(event.target)}
-            >
-              A
-            </span>
-            <span
-              className="letter"
-              onMouseOver={(event) => setRandomColor(event.target)}
-              onMouseOut={(event) => setColorToDefault(event.target)}
-            >
-              B
-            </span>
-            <span
-              className="letter"
-              onMouseOver={(event) => setRandomColor(event.target)}
-              onMouseOut={(event) => setColorToDefault(event.target)}
-            >
-              O
-            </span>
-            <span
-              className="letter"
-              onMouseOver={(event) => setRandomColor(event.target)}
-              onMouseOut={(event) => setColorToDefault(event.target)}
-            >
-              U
-            </span>
-            <span
-              className="letter"
-              onMouseOver={(event) => setRandomColor(event.target)}
-              onMouseOut={(event) => setColorToDefault(event.target)}
-            >
-              T
-            </span>
-            <span>J</span>
-            <span
-              className="letter"
-              onMouseOver={(event) => setRandomColor(event.target)}
-              onMouseOut={(event) => setColorToDefault(event.target)}
-            >
-              M
-            </span>
-            <span
-              className="letter"
-              onMouseOver={(event) => setRandomColor(event.target)}
-              onMouseOut={(event) => setColorToDefault(event.target)}
-            >
-              E
-            </span>
-          </h1>
-        </div> */}
         <section className="project_description">{displayWebsite()}</section>
         <div className="mindfulWallet start-image">
           <img
