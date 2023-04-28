@@ -13,6 +13,10 @@
     border-radius: 50%;
     z-index: 9999;
     pointer-events: none;
+    @media (max-width: 780px) {
+      display: none;
+      pointer-events: normal;
+    }
   }
 
 .cursor.hover{

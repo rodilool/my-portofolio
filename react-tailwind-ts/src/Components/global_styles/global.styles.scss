@@ -63,7 +63,7 @@
   html{
     cursor: none;
   }
-  @media (max-width: 1100px) and (orientation: landscape) {
+  @media (max-width: 780px) {
     html{
       cursor:auto;
     }
@@ -73,6 +73,9 @@
   #__next {
     width: 100%;
     height: 100%;
+    @media (max-width: 780px) {
+      cursor: cell;
+  }
   }
   
   * {
@@ -101,7 +104,7 @@
     opacity: 0;
     transform: translateX(-100px);
     transition: opacity 2s ease-in,
-    transform 1.5s ease;
+    transform 1s ease;
 }
 @media (prefers-reduced-motion) {
     .hidden{

@@ -12,8 +12,8 @@ interface State {}
 export default class Contacts extends Component<FuncProps, State> {
   render() {
     return (
-      <main className="main contacts">
-        <div className="title">
+      <main className="main contacts" id="contacts">
+        <div className="title contact_title hidden">
           <h1>
             <span
               className="letter"
@@ -73,14 +73,15 @@ export default class Contacts extends Component<FuncProps, State> {
             </span>
           </h1>
         </div>
-        <div className="contact-area">
-          <h2>Ready to collaborate? Let's talk!</h2>
+        <div className="contact-area hidden">
+          <h2 className="">Ready to collaborate? Let's talk!</h2>
           <div className="icons">
             <a
               href="https://github.com/rodilool"
               target="_Blank"
               onMouseEnter={this.props.onMouseOver}
               onMouseLeave={this.props.onMouseLeave}
+              className="hidden"
             >
               <div className="git-area">
                 <div className="icon git"></div>
@@ -93,6 +94,7 @@ export default class Contacts extends Component<FuncProps, State> {
               href="mailto:rodilool2@gmail.com?body=I%20am%20interested%20to%20work%20with%20you!"
               onMouseEnter={this.props.onMouseOver}
               onMouseLeave={this.props.onMouseLeave}
+              className="hidden"
             >
               <div className="email-area">
                 {/* <div className="icon email"></div> */}
@@ -105,8 +107,9 @@ export default class Contacts extends Component<FuncProps, State> {
               target="_Blankgit"
               onMouseEnter={this.props.onMouseOver}
               onMouseLeave={this.props.onMouseLeave}
+              className="hidden"
             >
-              <div className="git-area">
+              <div className="in-area">
                 <div className="icon in"></div>
                 <p className="user-git">
                   Rodrigo<span className="invisible">i</span>Seborro

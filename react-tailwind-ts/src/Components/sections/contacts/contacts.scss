@@ -1,17 +1,21 @@
 .main.contacts{
-    margin-top: 50px;
+    margin-top: 300px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 100vw;
+    overflow-x: hidden;
     .title{
         border-bottom: 1px solid rgba(255, 254, 254, 0.17);
         justify-self: center;
         align-self: center;
         margin-bottom: 120px;
         @media (max-width: 680px) {
-            display: none;
+            .letter {
+                font-size: 5.875rem;
+            }
         }
         h1 {
             line-height: 4rem;
@@ -26,6 +30,12 @@
                     filter: drop-shadow(1px 1px 4px white);
                     transition: ease 150ms 75ms;
                 }
+                @media (max-width: 845px) {
+                        font-size: 5.875rem;
+                }
+                @media (max-width: 520px) {
+                    font-size: 3rem;
+            }
             }
         }
     }
@@ -67,8 +77,18 @@
 .icon.in{
     background-image: url('../../../pictures/inContacts.png');
 }
-
-.git-area, .email-area{
+.git-area{
+    transition-delay: 400ms;
+}
+.email{
+    transition-delay: 800ms;
+    width: auto;
+    height: auto;
+}
+.in-area{
+    transition-delay: 1200ms;
+}
+.git-area, .email-area, .in-area{
     position: relative;
     width: 74px;
     height: 74px;
@@ -78,6 +98,9 @@
     overflow-x: hidden;
     z-index: 2;
     padding-bottom: 5rem;
+    @media (max-width: 780px) {
+        cursor: cell;
+    }
 }
 
 .user-git{
@@ -105,9 +128,55 @@
 .email-area:hover{
     width: 250px;
 }
+.in-area:hover{
+    width: 250px;
+}
 .git-area:hover > .user-git{
     opacity: 1;
 }
 .email-area:hover > .user-email{
     opacity: 1;
 }
+.in-area:hover > .user-git{
+    opacity: 1;
+}
+
+@media (max-width: 1360px) {
+    .contact-area h2{
+        font-size: 3rem;
+    }
+}
+@media (max-width: 980px) {
+    .contact-area h2{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 845px) {
+    .contact-area h2{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .contact-area h2{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:615px) {
+    .icons{
+        width: 99vw;
+    }
+}
+
+@media (max-width:450px) {
+    .git-area:hover{
+        width: 74px;
+    }
+    .email-area:hover{
+        width: 74px;
+    }
+    .in-area:hover{
+        width: 74px;
+    }
+}
+

@@ -26,7 +26,7 @@ class HeroSection extends React.Component<HeroSectionProps, HeroSectionState> {
           </h1>
           <section>
             <a
-              href="#"
+              href="#projects"
               onMouseEnter={this.props.onMouseOver}
               onMouseLeave={this.props.onMouseLeave}
             >

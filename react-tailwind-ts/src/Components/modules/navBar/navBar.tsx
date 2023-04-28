@@ -30,7 +30,7 @@ function NavBar({ onMouseOver, onMouseLeave }: nav_BarProps) {
       </div>
       <a
         className="contact-button"
-        href="#"
+        href="#contacts"
         onMouseEnter={onMouseOver}
         onMouseLeave={onMouseLeave}
       >

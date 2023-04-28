@@ -23,7 +23,7 @@ function Portfolio() {
           if (entry.isIntersecting) {
             projectDescription?.classList.add("show");
             if (entry.target === document.querySelector(".mindfulWallet")) {
-              setWebsiteTitle("MindfulWallet");
+              setWebsiteTitle("MoneyMindful");
               setWebsiteDescription(
                 "I made this website, focused on giving the user a good experience with managing his finances.\
                  You can view how much you've spent and recieved this month while also showing you a total of the two.\
@@ -73,7 +73,7 @@ function Portfolio() {
   }
 
   return (
-    <section className="portfolio_section">
+    <section className="portfolio_section" id="projects">
       <div className="content">
         {/* <div className="title hidden">
           <h1>
@@ -134,51 +134,51 @@ function Portfolio() {
           <img
             src={phoneWallet1}
             alt="phone wallet mockup"
-            className="phone_start hidden"
+            className="phone_start phone hidden"
           />
           <img
             src={laptopWallet1}
             alt="laptop wallet mockup"
-            className="laptop_wallet_start hidden"
+            className="laptop_wallet_start laptop hidden"
           />
           <img
             src={phoneWallet2}
             alt="phone wallet mockup"
-            className="phone_wallet2 hidden"
+            className="phone_wallet2 phone hidden"
           />
         </div>
         <div className="portfolio start-image">
           <img
             src={phonePortfolio1}
             alt="phone portfolio mockup"
-            className="phone_start hidden"
+            className="phone_start phone hidden"
           />
           <img
             src={laptopWallet1}
             alt="laptop wallet mockup"
-            className="laptop_wallet_start hidden"
+            className="laptop_wallet_start laptop hidden"
           />
           <img
             src={phoneWallet2}
             alt="phone wallet mockup"
-            className="phone_wallet2 hidden"
+            className="phone_wallet2 phone hidden"
           />
         </div>
         <div className="pokemon start-image">
           <img
             src={phoneWallet1}
             alt="phone wallet mockup"
-            className="phone_start hidden"
+            className="phone_start phone hidden"
           />
           <img
             src={laptopWallet1}
             alt="laptop wallet mockup"
-            className="laptop_wallet_start hidden"
+            className="laptop_wallet_start laptop hidden"
           />
           <img
             src={phoneWallet2}
             alt="phone wallet mockup"
-            className="phone_wallet2 hidden"
+            className="phone_wallet2 phone hidden"
           />
         </div>
       </div>
