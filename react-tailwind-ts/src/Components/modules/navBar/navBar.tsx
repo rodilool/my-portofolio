@@ -24,7 +24,7 @@ function NavBar({ onMouseOver, onMouseLeave }: nav_BarProps) {
   return (
     <nav className={`${stickyClass}`}>
       <div className="logo ">
-        <a href="#" onMouseEnter={onMouseOver} onMouseLeave={onMouseLeave}>
+        <a href="#main" onMouseEnter={onMouseOver} onMouseLeave={onMouseLeave}>
           <h1 /*onClick={toggleTheme}*/>RS</h1>
         </a>
       </div>

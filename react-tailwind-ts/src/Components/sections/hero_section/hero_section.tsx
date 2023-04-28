@@ -14,7 +14,7 @@ class HeroSection extends React.Component<HeroSectionProps, HeroSectionState> {
   }
   render() {
     return (
-      <section className="main_section">
+      <section className="main_section" id="main">
         <div className="main_content">
           <h1>
             Hey, I'm <span className="glow-effect name">Rodrigo Seborro</span>
