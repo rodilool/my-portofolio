@@ -21,7 +21,8 @@ class HeroSection extends React.Component<HeroSectionProps, HeroSectionState> {
             . <br />
             <span className="iam">Web Developer</span>
             <br /> <br />
-            Welcome to my <span className="glow-effect world">WORLD</span>
+            <span className="welcome">Welcome to my</span>{" "}
+            <span className="glow-effect world">WORLD</span>
             <span className="exclamation">!</span>
           </h1>
           <section>

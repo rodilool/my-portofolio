@@ -51,7 +51,7 @@ function Portfolio() {
               setWebsiteAvailable("block");
               setIcons_array([CSS, React, Ts]);
             } else if (entry.target === document.querySelector(".pokemon")) {
-              setWebsiteTitle("Pokedex");
+              setWebsiteTitle("Pokedex (SOON!)");
               setWebsiteDescription(
                 `I joined a team of web developers to create a Pokedex\
                     website. We've decided to create a brand new Pokemon API\
@@ -95,7 +95,7 @@ function Portfolio() {
 
   function displayWebsite() {
     return (
-      <>
+      <div key={websiteTitle}>
         <h1>{websiteTitle}</h1>
         <p>{websiteDescription}</p>
         <a
@@ -109,7 +109,7 @@ function Portfolio() {
           Visit it now!
         </a>
         <>{iterateArray()}</>
-      </>
+      </div>
     );
   }
 

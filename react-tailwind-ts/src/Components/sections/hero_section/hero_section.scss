@@ -20,12 +20,23 @@ section.main_section{
             font-size: 2rem;
         }
         }
+        h1 .welcome{
+            font-size: 3rem;
+            text-align: center;
+            @media (max-width: 560px) {
+                font-size: 2rem;
+            }
+            webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 1400ms;
+	        animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 1400ms;
+        }
         h1 .iam {
             @media (max-width: 560px) {
                 font-size: 1.75rem;
             }
             font-size: 2.25rem;
             letter-spacing: .75rem;
+            -webkit-animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 400ms;
+	        animation: fade-in-fwd 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 400ms;
         }
         h1 .world{
             font-size: 4rem;
@@ -34,10 +45,15 @@ section.main_section{
             @media (max-width: 560px) {
                 font-size: 3rem;
             }
-            
+            webkit-animation: flicker-in-1 2s linear both 2400ms,
+            text-shadow-drop-center 1.5s ease-out infinite alternate both;
+	        animation: flicker-in-1 2s linear both 2400ms,
+            text-shadow-drop-center 1.5s ease-out infinite alternate both;
         }
         h1 .exclamation{
             font-size: 4rem;
+            -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 4400ms;
+	        animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 4400ms;
             @media (max-width: 560px) {
                 font-size: 3rem;
             }
@@ -81,6 +97,8 @@ section.main_section{
                 padding: 0.65rem 1.25rem;
                 mix-blend-mode: normal;
                 margin: 1rem;
+                -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 3200ms;
+                animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 3200ms;
             }
             @media (max-width: 560px) {
                 padding: 0.5rem 1rem;
@@ -125,3 +143,219 @@ section.main_section{
       text-shadow: 1px 1px 12px var(--accent-600);
     }
   }
+
+  @-webkit-keyframes fade-in-fwd {
+    0% {
+      -webkit-transform: translateZ(-80px);
+              transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-fwd {
+    0% {
+      -webkit-transform: translateZ(-80px);
+              transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes flicker-in-1 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    10.1% {
+      opacity: 1;
+    }
+    10.2% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    20.1% {
+      opacity: 1;
+    }
+    20.6% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    30.1% {
+      opacity: 1;
+    }
+    30.5% {
+      opacity: 1;
+    }
+    30.6% {
+      opacity: 0;
+    }
+    45% {
+      opacity: 0;
+    }
+    45.1% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+    }
+    55.1% {
+      opacity: 0;
+    }
+    57% {
+      opacity: 0;
+    }
+    57.1% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    60.1% {
+      opacity: 0;
+    }
+    65% {
+      opacity: 0;
+    }
+    65.1% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    75.1% {
+      opacity: 0;
+    }
+    77% {
+      opacity: 0;
+    }
+    77.1% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    85.1% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 0;
+    }
+    86.1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes flicker-in-1 {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 0;
+    }
+    10.1% {
+      opacity: 1;
+    }
+    10.2% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    20.1% {
+      opacity: 1;
+    }
+    20.6% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    30.1% {
+      opacity: 1;
+    }
+    30.5% {
+      opacity: 1;
+    }
+    30.6% {
+      opacity: 0;
+    }
+    45% {
+      opacity: 0;
+    }
+    45.1% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 1;
+    }
+    55.1% {
+      opacity: 0;
+    }
+    57% {
+      opacity: 0;
+    }
+    57.1% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    60.1% {
+      opacity: 0;
+    }
+    65% {
+      opacity: 0;
+    }
+    65.1% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    75.1% {
+      opacity: 0;
+    }
+    77% {
+      opacity: 0;
+    }
+    77.1% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    85.1% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 0;
+    }
+    86.1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

@@ -9,6 +9,7 @@ import Contacts from "./Components/sections/contacts/contacts";
 
 function App() {
   const [isNavBarHovered, setIsNavBarHovered] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleMouseEnter = () => {
     setIsNavBarHovered(true);

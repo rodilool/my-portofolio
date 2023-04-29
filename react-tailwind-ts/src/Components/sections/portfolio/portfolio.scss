@@ -45,6 +45,14 @@
                 left: 5%;
                 top: 20%;
             }
+            @media (max-width:560px) and (max-height:1000px) {
+                
+            }
+            @media (max-width: 370px) and (max-height: 525px) {
+                top: 13%;
+                padding: 1rem;
+                left: 8%;
+            }
             h1{
                 font-size: 4rem;
                 padding-bottom: 0.75rem;
@@ -82,6 +90,12 @@
             }
             @media (max-width: 375px) {
                 width: 60%;
+            }
+            @media (max-width: 560px) and (max-height: 525px) and (min-width: 500px ) {
+                width: 40%;
+            }
+            @media (max-width: 414px) and (max-height: 480px) and (min-width: 0px ) {
+                width: 40%;
             }
         }
         .laptop{
