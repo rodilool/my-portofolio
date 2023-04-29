@@ -95,7 +95,7 @@ function AboutMe({ onMouseOver, onMouseLeave }: AboutMeProps) {
             <img alt="Profile Picture hidden" src={PP}></img>
             <div className="funFacts hidden">
               <div>
-                <h4>FUN FACTS:</h4>
+                <h2>FUN FACTS:</h2>
                 <ul>
                   <li>
                     My fascinations with computers started when I got my first

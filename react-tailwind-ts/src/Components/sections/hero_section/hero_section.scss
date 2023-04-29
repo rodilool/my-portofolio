@@ -52,8 +52,8 @@ section.main_section{
         }
         h1 .exclamation{
             font-size: 4rem;
-            -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 4400ms;
-	        animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 4400ms;
+            -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 3800ms;
+	        animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both 3800ms;
             @media (max-width: 560px) {
                 font-size: 3rem;
             }
