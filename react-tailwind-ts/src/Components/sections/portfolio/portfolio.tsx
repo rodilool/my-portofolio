@@ -4,6 +4,10 @@ import phoneWallet1 from "../../../pictures/websites/wallet.png";
 import phoneWallet2 from "../../../pictures/websites/wallet2.png";
 import laptopWallet1 from "../../../pictures/websites/laptopwallet.png";
 import phonePortfolio1 from "../../../pictures/websites/portfolio1.png";
+import laptopPortfolio1 from "../../../pictures/websites/laptop_portfolio1.png";
+import laptopPortfolio2 from "../../../pictures/websites/laptop_portfolio2.png";
+import laptopSoon from "../../../pictures/laptop_soon.png";
+import phoneSoon from "../../../pictures/phone_soon.png";
 import CSS from "../../../pictures/Icons/CSS/CSSsmall.png";
 import React from "../../../pictures/Icons/React/React ballsmall.png";
 import Ts from "../../../pictures/Icons/Typescript/Typescript_logo_2020 1small.png";
@@ -136,34 +140,34 @@ function Portfolio() {
         </div>
         <div className="portfolio start-image">
           <img
+            src={laptopPortfolio1}
+            alt="laptop portfolio mockup"
+            className="phone_start laptop hidden"
+          />
+          <img
             src={phonePortfolio1}
             alt="phone portfolio mockup"
-            className="phone_start phone hidden"
+            className="laptop_wallet_start phone hidden"
           />
           <img
-            src={laptopWallet1}
-            alt="laptop wallet mockup"
-            className="laptop_wallet_start laptop hidden"
-          />
-          <img
-            src={phoneWallet2}
-            alt="phone wallet mockup"
-            className="phone_wallet2 phone hidden"
+            src={laptopPortfolio2}
+            alt="laptop portfolio mockup"
+            className="phone_wallet2 laptop hidden"
           />
         </div>
         <div className="pokemon start-image">
           <img
-            src={phoneWallet1}
+            src={phoneSoon}
             alt="phone wallet mockup"
             className="phone_start phone hidden"
           />
           <img
-            src={laptopWallet1}
+            src={laptopSoon}
             alt="laptop wallet mockup"
             className="laptop_wallet_start laptop hidden"
           />
           <img
-            src={phoneWallet2}
+            src={phoneSoon}
             alt="phone wallet mockup"
             className="phone_wallet2 phone hidden"
           />
