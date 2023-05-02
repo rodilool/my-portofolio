@@ -83,7 +83,7 @@ function AboutMe({ onMouseOver, onMouseLeave }: AboutMeProps) {
             learns by receiving pats on the back.
           </p>
           <a
-            href="https://drive.google.com/file/d/1CXF5uenh0bScMCCLVU7590woWhs6htc0/view?usp=share_link"
+            href="https://drive.google.com/file/d/1QauCV4Iuro7jLEnMHPy4K7OOqSEWjuoO/view?usp=share_link"
             target="_blank"
             className="hidden"
             onMouseEnter={onMouseOver}
