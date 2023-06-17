@@ -6,11 +6,25 @@ import laptopWallet1 from "../../../pictures/websites/laptopwallet.png";
 import phonePortfolio1 from "../../../pictures/websites/portfolio1.png";
 import laptopPortfolio1 from "../../../pictures/websites/laptop_portfolio1.png";
 import laptopPortfolio2 from "../../../pictures/websites/laptop_portfolio2.png";
+import laptopLarDashboard1 from "../../../pictures/websites/laptop1_LarDashboard.png";
+import laptopLarDashboard2 from "../../../pictures/websites/laptop2_LarDashboard.png";
+import laptopLarDashboard3 from "../../../pictures/websites/laptop3_LarDashboard.png";
+import laptopSocialMediaLar1 from "../../../pictures/websites/laptop1SocialMediaLar.png";
+import phoneSocialMediaLar2 from "../../../pictures/websites/phone1LarSocialMedia.png";
+import phoneSocialMediaLar1 from "../../../pictures/websites/phone2LarSocialMedia.png";
 import laptopSoon from "../../../pictures/laptop_soon.png";
 import phoneSoon from "../../../pictures/phone_soon.png";
 import CSS from "../../../pictures/Icons/CSS/CSSsmall.png";
+import SCSS from "../../../pictures/Icons/SCSS/SCSS.png";
 import React from "../../../pictures/Icons/React/React ballsmall.png";
+import Redux from "../../../pictures/Icons/Redux/redux reactsmall.png";
 import Ts from "../../../pictures/Icons/Typescript/Typescript_logo_2020 1small.png";
+import Next from "../../../pictures/Icons/Next.js/Next.png";
+import PostgreSQL from "../../../pictures/Icons/PostgreSQL/PostgreSQL.png";
+import Django from "../../../pictures/Icons/Django/Django.png";
+import Electron from "../../../pictures/Icons/Electron/Electron.png";
+import Tailwind from "../../../pictures/Icons/Tailwind/Tailwind.png";
+import Emotion from "../../../pictures/Icons/Emotion/Emotion.png";
 import "./portfolio.scss";
 
 interface PortfolioProps {}
@@ -53,7 +67,7 @@ function Portfolio() {
               );
               setWebsiteLink("#main");
               setWebsiteAvailable("block");
-              setIcons_array([CSS, React, Ts]);
+              setIcons_array([SCSS, React, Ts]);
             } else if (entry.target === document.querySelector(".pokemon")) {
               setWebsiteTitle("Pokedex (SOON!)");
               setWebsiteDescription(
@@ -66,6 +80,40 @@ function Portfolio() {
               setWebsiteLink("//");
               setWebsiteAvailable("none");
               setIcons_array([]);
+            } else if (
+              entry.target === document.querySelector(".LarDashboard")
+            ) {
+              setWebsiteTitle("O Lar Dashboard");
+              setWebsiteDescription(
+                `This Project was created with the intuitive of a elderly home\
+                to be able to keep some of this details saved not only on physical\
+                paper, but now they can also save their data on a computer. This\
+                website is connected to a REST API which with any update, delete or create request\
+                will also affect the "O lar Social Media" website.`
+              );
+              setWebsiteLink("https://youtu.be/Abv9sTkMg38");
+              setWebsiteAvailable("block");
+              setIcons_array([
+                Next,
+                PostgreSQL,
+                Django,
+                Emotion,
+                Electron,
+                Redux,
+              ]);
+            } else if (
+              entry.target === document.querySelector(".LarSocialMedia")
+            ) {
+              setWebsiteTitle("O Lar Social Media");
+              setWebsiteDescription(
+                `This Project was created with the intuitive of a elderly home to share posts with 
+                their people, sharing photos, letting users comment to share their thoughts. Also
+                 letting users see the information and recent medical visits of their responsible elders.
+                 `
+              );
+              setWebsiteLink("https://youtu.be/Aand_O4UAlM");
+              setWebsiteAvailable("block");
+              setIcons_array([React, PostgreSQL, Django, Tailwind]);
             }
           } else {
             projectDescription?.classList.remove("show");
@@ -169,6 +217,40 @@ function Portfolio() {
           <img
             src={phoneSoon}
             alt="phone wallet mockup"
+            className="phone_wallet2 phone hidden"
+          />
+        </div>
+        <div className="LarDashboard start-image">
+          <img
+            src={laptopLarDashboard1}
+            alt="laptop Lar Dashboard mockup"
+            className="phone_start laptop hidden"
+          />
+          <img
+            src={laptopLarDashboard2}
+            alt="laptop Lar Dashboard mockup"
+            className="laptop_wallet_start laptop hidden"
+          />
+          <img
+            src={laptopLarDashboard3}
+            alt="laptop Lar Dashboard mockup"
+            className="phone_wallet2 laptop hidden"
+          />
+        </div>
+        <div className="LarSocialMedia start-image">
+          <img
+            src={phoneSocialMediaLar1}
+            alt="laptop wallet mockup"
+            className="phone_start phone hidden"
+          />
+          <img
+            src={laptopSocialMediaLar1}
+            alt="laptop wallet mockup"
+            className="laptop_wallet_start laptop hidden"
+          />
+          <img
+            src={phoneSocialMediaLar2}
+            alt="laptop portfolio mockup"
             className="phone_wallet2 phone hidden"
           />
         </div>

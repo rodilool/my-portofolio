@@ -212,6 +212,76 @@
                 }
             }
         }
+        .LarDashboard{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50vh;
+            .phone_start.hidden{
+                align-self: end;
+                margin-right: 0;
+                opacity: 0;
+                transition: 350 ms ease;
+                transform: translate(0);
+                &.show{
+                    animation: moving_up_down 40s infinite;
+                    opacity: 1;
+                }
+            }
+            .laptop_wallet_start{
+                align-self: center;
+                padding-left: 15%;
+                &.show{
+                    opacity: 1;
+                    animation: moving_up_down 42s infinite 1s;
+                }
+            }
+            .phone_wallet2{
+                align-self: center;
+                margin-right: 10%;
+                opacity: 0;
+                transition: 350 ms ease;
+                transform: translate(0);
+                &.show{
+                    opacity: 1;
+                    animation: moving_up_down 45s infinite 3s;
+                }
+            }
+        }
+        .LarSocialMedia{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50vh;
+            .phone_start.hidden{
+                align-self: end;
+                margin-right: 0;
+                opacity: 0;
+                transition: 350 ms ease;
+                transform: translate(0);
+                &.show{
+                    animation: moving_up_down 40s infinite;
+                    opacity: 1;
+                }
+            }
+            .laptop_wallet_start{
+                align-self: center;
+                padding-left: 15%;
+                &.show{
+                    opacity: 1;
+                    animation: moving_up_down 42s infinite 1s;
+                }
+            }
+            .phone_wallet2{
+                align-self: center;
+                margin-right: 10%;
+                opacity: 0;
+                transition: 350 ms ease;
+                transform: translate(0);
+                &.show{
+                    opacity: 1;
+                    animation: moving_up_down 45s infinite 3s;
+                }
+            }
+        }
     }
 }
 .start-image{
