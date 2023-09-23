@@ -68,14 +68,13 @@ function Portfolio() {
               setWebsiteLink("#main");
               setWebsiteAvailable("block");
               setIcons_array([SCSS, React, Ts]);
-            } else if (entry.target === document.querySelector(".pokemon")) {
-              setWebsiteTitle("Pokedex (SOON!)");
+            } else if (
+              entry.target === document.querySelector(".BookshelfBuddy")
+            ) {
+              setWebsiteTitle("BookshelfBuddy (SOON!)");
               setWebsiteDescription(
-                `I joined a team of web developers to create a Pokedex\
-                    website. We've decided to create a brand new Pokemon API\
-                    which we will use to display Pokemon's data in a Pokedex\
-                    Format. Want to get to know more about your favourite\
-                    pokemon? Visit us!`
+                `Together with Google Books API I've created a website where users can not only search for books in the Google's API/ 
+                but also together with my own created API, sign-up to the website and save their favorite books to track their reading.`
               );
               setWebsiteLink("//");
               setWebsiteAvailable("none");
@@ -203,7 +202,7 @@ function Portfolio() {
             className="phone_wallet2 laptop hidden"
           />
         </div>
-        <div className="pokemon start-image">
+        <div className="BookshelfBuddy start-image">
           <img
             src={phoneSoon}
             alt="phone wallet mockup"
