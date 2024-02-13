@@ -76,7 +76,7 @@ export default class Contacts extends Component<FuncProps, State> {
         <div className="contact-area hidden">
           <h2 className="">Ready to collaborate? Let's talk!</h2>
           <div className="icons">
-            <a
+            {/* <a
               href="https://github.com/rodilool"
               target="_Blank"
               onMouseEnter={this.props.onMouseOver}
@@ -89,7 +89,7 @@ export default class Contacts extends Component<FuncProps, State> {
                   Rodrigo<span className="invisible">i</span>Seborro
                 </p>
               </div>
-            </a>
+            </a> */}
             <a
               href="mailto:rodilool2@gmail.com?body=I%20am%20interested%20to%20work%20with%20you!"
               onMouseEnter={this.props.onMouseOver}

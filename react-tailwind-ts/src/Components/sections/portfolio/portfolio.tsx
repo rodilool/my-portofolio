@@ -68,20 +68,20 @@ function Portfolio() {
               setWebsiteLink("#main");
               setWebsiteAvailable("block");
               setIcons_array([SCSS, React, Ts]);
-            } else if (
-              entry.target === document.querySelector(".BookshelfBuddy")
-            ) {
-              setWebsiteTitle("BookshelfBuddy (SOON!)");
-              setWebsiteDescription(
-                `Together with Google Books API I've created a website where users can not only search for books in the Google's API/ 
-                but also together with my own created API, sign-up to the website and save their favorite books to track their reading.`
-              );
-              setWebsiteLink("//");
-              setWebsiteAvailable("none");
-              setIcons_array([]);
-            } else if (
-              entry.target === document.querySelector(".LarDashboard")
-            ) {
+            }
+            // else if (
+            //   entry.target === document.querySelector(".BookshelfBuddy")
+            // ) {
+            //   setWebsiteTitle("BookshelfBuddy (SOON!)");
+            //   setWebsiteDescription(
+            //     `Together with Google Books API I've created a website where users can not only search for books in the Google's API/
+            //     but also together with my own created API, sign-up to the website and save their favorite books to track their reading.`
+            //   );
+            //   setWebsiteLink("//");
+            //   setWebsiteAvailable("none");
+            //   setIcons_array([]);
+            // }
+            else if (entry.target === document.querySelector(".LarDashboard")) {
               setWebsiteTitle("O Lar Dashboard");
               setWebsiteDescription(
                 `This Project was created with the intuitive of a elderly home\
@@ -202,7 +202,7 @@ function Portfolio() {
             className="phone_wallet2 laptop hidden"
           />
         </div>
-        <div className="BookshelfBuddy start-image">
+        {/* <div className="BookshelfBuddy start-image">
           <img
             src={phoneSoon}
             alt="phone wallet mockup"
@@ -218,7 +218,7 @@ function Portfolio() {
             alt="phone wallet mockup"
             className="phone_wallet2 phone hidden"
           />
-        </div>
+        </div> */}
         <div className="LarDashboard start-image">
           <img
             src={laptopLarDashboard1}

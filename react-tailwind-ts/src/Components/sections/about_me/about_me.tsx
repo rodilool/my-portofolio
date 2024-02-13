@@ -76,14 +76,14 @@ function AboutMe({ onMouseOver, onMouseLeave }: AboutMeProps) {
             Seborro
           </h1>
           <p className="hidden">
-            I am an enthusiastic Front-end engineer.<br></br> I am always
-            looking to expand my knowledge by self-motivation and
-            self-discipline while also integrate myself with other engineers so
-            we can grow together. I’m always open to feedback because no one
-            learns by receiving pats on the back.
+            I am an enthusiastic Web Developer.<br></br> Since I've started this
+            path, officially on October 2022, I've developed a vairiety of
+            skills through not only courses with CodeAcademy and Master D, but
+            also by self-taught, by making mistakes and pushing the limits on
+            what I can do through every single project.
           </p>
           <a
-            href="https://drive.google.com/file/d/1CXF5uenh0bScMCCLVU7590woWhs6htc0/view?usp=share_link"
+            href="https://drive.google.com/file/d/1V-DWwrQ1C3L6ZjjqgvPwIss4FYX0IM6c/view?usp=sharing"
             target="_blank"
             className="hidden"
             onMouseEnter={onMouseOver}
@@ -102,11 +102,8 @@ function AboutMe({ onMouseOver, onMouseLeave }: AboutMeProps) {
                     desktop as a kid and wanted to repair it on my own.
                   </li>
                   <li>
-                    I started my programming journey with Python basics before
-                    finding Web Development.
-                  </li>
-                  <li>
-                    I’m a self-taught developer but it never held me back.
+                    I started my programming journey with basics on Python
+                    before finding Web Development.
                   </li>
                   <li>
                     One thing I love about developers is how open everyone is to
