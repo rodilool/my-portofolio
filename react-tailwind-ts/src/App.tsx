@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     const hiddenElements = document.querySelectorAll(".hidden");
-    console.log(hiddenElements);
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
