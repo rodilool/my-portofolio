@@ -103,7 +103,7 @@ export default class Contacts extends Component<FuncProps, State> {
               </div>
             </a>
             <a
-              href="https://www.linkedin.com/in/rodrigo-seborro-300a33180/"
+              href="https://www.linkedin.com/in/rodrigo-seborro/"
               target="_Blankgit"
               onMouseEnter={this.props.onMouseOver}
               onMouseLeave={this.props.onMouseLeave}

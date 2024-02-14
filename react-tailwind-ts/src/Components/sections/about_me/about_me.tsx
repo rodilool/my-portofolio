@@ -76,11 +76,12 @@ function AboutMe({ onMouseOver, onMouseLeave }: AboutMeProps) {
             Seborro
           </h1>
           <p className="hidden">
-            I am an enthusiastic Web Developer.<br></br> Since I've started this
-            path, officially on October 2022, I've developed a vairiety of
-            skills through not only courses with CodeAcademy and Master D, but
-            also by self-taught, by making mistakes and pushing the limits on
-            what I can do through every single project.
+            I am an enthusiastic Web Developer.<br></br>
+            Since I've started this path, officially on October 2022, I've
+            developed a variety of skills through not only courses with
+            CodeAcademy and Master D, but also through self-taught, by making
+            mistakes and pushing the limits on what I can do through every
+            single project.
           </p>
           <a
             href="https://drive.google.com/file/d/1V-DWwrQ1C3L6ZjjqgvPwIss4FYX0IM6c/view?usp=sharing"
