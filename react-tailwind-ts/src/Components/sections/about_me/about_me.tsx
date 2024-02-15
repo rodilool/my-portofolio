@@ -84,7 +84,7 @@ function AboutMe({ onMouseOver, onMouseLeave }: AboutMeProps) {
             single project.
           </p>
           <a
-            href="https://drive.google.com/file/d/1V-DWwrQ1C3L6ZjjqgvPwIss4FYX0IM6c/view?usp=sharing"
+            href="https://drive.google.com/file/d/1FnDUXst1ELzqGUX0ee8VPlA4auP-lQl3/view?usp=sharing"
             target="_blank"
             className="hidden"
             onMouseEnter={onMouseOver}
